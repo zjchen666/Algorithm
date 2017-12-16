@@ -1,0 +1,154 @@
+Given an integer array, find a subarray where the sum of numbers is zero. Your code should return the index of the first number and the index of the last number.
+ Notice：
+There is at least one subarray that it's sum equals to zero.
+Example
+Given [-3, 1, 2, -3, 4], return [0, 2] or [1, 3].
+### 思路 ###
+   + 常规解法从第一个元素开始遍历直到结尾，依次缩短subarray长度寻找结果。时间复杂度O(n*n),不需要额外空间。
+   + prefix sum 
+ 令 PrefixSum[i] = nums[0] + nums[1] + ... nums[i], PrefixSum[0] = nums[0] 易知构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间 如需计算子数组从下标i到下标j之间的所有数之和 则有 Sum(i~j) = PrefixSum[j] - PrefixSum[i-1]。
+   + 找出 Sum[i] = Sum[j] 即可。
+   + 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
+ 
+```python
+import copy
+class Solution:
+    """
+    @param: nums: A list of integers
+    @return: A list of integers includes the index of the first number and the index of the last number
+    """
+    def subarraySum(self, nums):
+        # write your code here
+        if not nums:
+            return []
+        hash = {}
+        sum = 0
+        result = []
+        for i in range(0, len(nums)):
+            sum += nums[i]
+            if sum == 0:
+                return [0,i]
+            if sum in hash:
+                hash[sum] = i
+            else:
+                result = [hash[sum]+1, i]
+                break
+        return result
+```
+### Maximum Subarray ###
+   + 使用以下模版, 注意min_prefix = 0而不是nums[0]，因为全为正数的话，最大sum是与0之差。
+
+```python
+class Solution:
+    """
+    @param: nums: A list of integers
+    @return: A integer indicate the sum of max subarray
+    """
+    def maxSubArray(self, nums):
+        # write your code here
+        if not nums:
+            return 0
+            
+        max_sum = nums[0]
+        min_prefix = 0
+        for i in range(1, len(nums)):
+            nums[i] += nums[i-1]
+            min_prefix = min(min_prefix, nums[i-1])
+            max_sum = max(max_sum, nums[i] - min_prefix)
+        return max_sum
+```
+### Subarray Sum Closet ###
++ 依然是presum，之后需要排序，找出相邻节点最小差值。
+```python
+import sys
+class Solution:
+    """
+    @param: nums: A list of integers
+    @return: A list of integers includes the index of the first number and the index of the last number
+    """
+    def subarraySumClosest(self, nums):
+        if not nums:
+            return []
+        if len(nums) == 1:
+            return [0,0]
+        # write your code here
+        minVal = sys.maxsize
+        prefixSum = list()
+        hash = {}
+        resuls = []
+        sum = 0
+        for i in range(len(nums)):
+            sum += nums[i]
+            prefixSum.append(sum)
+            if sum in hash:
+                return [hash[sum]+1, i]
+            else:
+                hash[sum] = i
+        prefixSum.sort()
+        for i in range(len(nums)-1):
+            if abs(prefixSum[i+1] - prefixSum[i]) < minVal:
+                minVal = abs(prefixSum[i+1] - prefixSum[i])
+                if hash[prefixSum[i+1]] > hash[prefixSum[i]]:
+                    result = [hash[prefixSum[i]]+1, hash[prefixSum[i+1]]]
+                else:
+                    result = [hash[prefixSum[i+1]]+1, hash[prefixSum[i]]]
+        return result
+```
+## Maximun Subarray 2 ##
+### 解法 ###
+   1. presum 之后 brutal force 循环会超时。
+   2. presum 之后 one pass，只需要记住i - k之前的最小sum即可。
+
+Given an integer arrays, find a contiguous subarray which has the largest sum and length should be greater or equal to given length k.
+Return the largest sum, return 0 if there are fewer than k elements in the array.
+Notice
+Ensure that the result is an integer type.
+Example
+Given the array [-2,2,-3,4,-1,2,1,-5,3] and k = 5, the contiguous subarray [2,-3,4,-1,2,1] has the largest sum = 5.
+
+```python
+class Solution:
+    """
+    @param: nums: an array of integer
+    @param: k: an integer
+    @return: the largest sum
+    """
+    def maxSubarray3(self, nums, k):
+        # write your code here
+        if not nums or k > len(nums):
+            return 0
+        
+        for i in range(1,len(nums)):
+            nums[i] = nums[i] + nums[i-1]
+            
+        largest_sum = nums[k-1]
+        # O(N*N) TLE
+        for j in range(k, len(nums)+1):
+            if nums[j-1] > largest_sum:
+                largest_sum = nums[j-1]
+            for i in range(j, len(nums)):
+                if nums[i] - nums[i-j] > largest_sum:
+                    largest_sum = nums[i] - nums[i-j]
+        return largest_sum
+    
+    def maxSubarray4(self, nums, k):
+        # write your code here
+        if not nums or k > len(nums):
+            return 0
+            
+        result = 0
+        for i in range(0, k):
+            result += nums[i]
+            
+        min_prefix = 0
+        sum = [0 for i in range(len(nums))]
+        sum[0] = nums[0]
+
+        for i in range(1, len(nums)):
+            sum[i] = sum[i-1] + nums[i]
+            if i >= k:
+                min_prefix = min(min_prefix, sum[i-k])
+                result = max(sum[i] - min_prefix, result)
+
+        return result
+```
