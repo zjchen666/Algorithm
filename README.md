@@ -1,3 +1,3 @@
 # Algorithm
 Algorithm Study 
-[我的简介](/algorithm/two_sum.md)
+[Two Sum 问题](/two_sum.md)
