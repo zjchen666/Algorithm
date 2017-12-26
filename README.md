@@ -1,3 +1,3 @@
-# Algorithm
-Algorithm Study 
+# Algorithm and Data Structure Study #
+
 [Two Sum 问题](/two_sum.md)
