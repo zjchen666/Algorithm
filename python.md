@@ -43,3 +43,4 @@ matrix = [[0 for i in range(3)] for i in range(3)]
   set(a)
   set(['a', 'c', 'b'])
 ```
+- hash table  可以存储link list 的node
