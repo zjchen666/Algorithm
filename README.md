@@ -1,5 +1,5 @@
 # Algorithm and Data Structure Study #
 
-[Two Sum 问题](/two_sum.md)
-
-[Graph](/graph.md)
+# 目录
+* [Two Sum 问题](/two_sum.md)
+* [Graph](/graph.md)
