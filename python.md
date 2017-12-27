@@ -1,7 +1,7 @@
 
-## [hash table and hash set](#hash)
-## [array](#array) 
-## [string](#string)
+* [hash table and hash set](#hash)
+* [array](#array) 
+* [string](#string)
 
 ### hash
 - if i not in dict() 要比 if i in dict() 耗时。前者O（n）后者O（1）。
@@ -63,3 +63,4 @@ matrix = [[0 for i in range(3)] for i in range(3)]
   b = copy.copy(a) #改变a[i]， b跟着变， copy会生成一个新的对象，inner object和a是一样的
   b = copy.deepcopy(a) #改变a[i]， b不变， deepcopy 会复制所有的的对象
 ```
+### string
