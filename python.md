@@ -64,4 +64,5 @@ matrix = [[0 for i in range(3)] for i in range(3)]
   b = copy.deepcopy(a) #改变a[i]， b不变， deepcopy 会复制所有的的对象
 ```
 ### string
-  可以使用 sorted(str) 为字符串排序。 不能用str.sort()， 因为字符串是imutable。 sorted()会create a new list.
+  可以使用 sorted(str) 为字符串排序。 不能用str.sort()， 因为字符串是immutable。 sorted()会create a new character list.
+  use "".join(sorted(str)) to get a sorted new string.
