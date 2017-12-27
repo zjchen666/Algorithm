@@ -1,7 +1,7 @@
 
-* [hash table and hash set](#hash)
-* [array](#array) 
-* [string](#string)
+## [hash table and hash set](#hash)
+## [array](#array) 
+## [string](#string)
 
 ### hash
 - if i not in dict() 要比 if i in dict() 耗时。前者O（n）后者O（1）。
