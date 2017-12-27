@@ -8,7 +8,8 @@ Return 5.
 7 + 15 < 25
 
 ### 关键点 ###
-  + 数组必须先排序。
+  + 解法一， hash table O(n)
+  + 解法二，双指针 数组必须先排序。O(nlogn)
  
 ```python
 class Solution:
