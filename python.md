@@ -1,6 +1,20 @@
+### hash table and hash set
 - if i not in dict() 要比 if i in dict() 耗时。前者O（n）后者O（1）。
    用 if None == dict.get() 最快
 - hash table 取value的操作：hash.get(key)
+- Set
+```python
+  set(str) 是取string 不重复的字符。
+>>> a = set("a,b,c")
+>>> a
+set(['a', 'c', 'b', ',']
+  
+  set([str]) 是将一个字符串加到set里
+  set(a)
+  set(['a', 'c', 'b'])
+```
+- hash table  可以存储link list 的node
+### array
 - 二维数组预定义：
 ```python
 matrix = [[0 for i in range(3)] for i in range(3)]
@@ -36,11 +50,3 @@ matrix = [[0 for i in range(3)] for i in range(3)]
   b = copy.copy(a) #改变a[i]， b跟着变， copy会生成一个新的对象，inner object和a是一样的
   b = copy.deepcopy(a) #改变a[i]， b不变， deepcopy 会复制所有的的对象
 ```
-- Set
-```python
-  set(str) 是取string 不重复的字符。
-  set([str]) 是将一个字符串加到set里
-  set(a)
-  set(['a', 'c', 'b'])
-```
-- hash table  可以存储link list 的node
