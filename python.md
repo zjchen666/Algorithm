@@ -18,6 +18,15 @@ set(['a', 'c', 'b', ',']
   set(['a', 'c', 'b'])
 * hash table  可以存储link list 的node
 * list 不能用做hash的key。list is unhashable.
+* for key in hash 注意是key不是val。
+dict.clear() 删除字典中所有元素
+dict.copy() 返回字典(浅复制)的一个副本
+dict.get(key,default=None) 对字典dict中的键key,返回它对应的值value，如果字典中不存在此键，则返回default 的值(注意，参数default 的默认值为None)
+dict.has_key(key) 如果键(key)在字典中存在，返回True，否则返回False
+dict.items() 返回一个包含字典中(键, 值)对元组的列表
+dict.keys() 返回一个包含字典中键的列表
+dict.values() 返回一个包含字典中所有值的列表
+
 ### array
 - 二维数组预定义：
 ```python
