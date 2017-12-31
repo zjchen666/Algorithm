@@ -1,10 +1,15 @@
 
 Trie Tree
 ===========
+### 主要操作 ### 
 - 创建
 - 查找
 - 删除
 - 前缀
+
+### 数据结构 ###
+  hash table - setdefault()
+  The method setdefault() is similar to get(), but will set dict[key]=default if key is not already in dict.
 
 ```python
 class Trie(object):

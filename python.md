@@ -18,6 +18,15 @@ set(['a', 'c', 'b', ',']
   set(['a', 'c', 'b'])
 * hash table  可以存储link list 的node
 * list 不能用做hash的key。list is unhashable.
+* for key in hash 注意是key不是val。
+* dict.clear() 删除字典中所有元素
+* dict.copy() 返回字典(浅复制)的一个副本
+* dict.get(key,default=None) 对字典dict中的键key,返回它对应的值value，如果字典中不存在此键，则返回default 的值(注意，参数default 的默认值为None)
+* dict.has_key(key) 如果键(key)在字典中存在，返回True，否则返回False
+* dict.items() 返回一个包含字典中(键, 值)对元组的列表
+* dict.keys() 返回一个包含字典中键的列表
+* dict.values() 返回一个包含字典中所有值的列表
+
 ### array
 - 二维数组预定义：
 ```python
@@ -54,3 +63,6 @@ matrix = [[0 for i in range(3)] for i in range(3)]
   b = copy.copy(a) #改变a[i]， b跟着变， copy会生成一个新的对象，inner object和a是一样的
   b = copy.deepcopy(a) #改变a[i]， b不变， deepcopy 会复制所有的的对象
 ```
+### string
+  可以使用 sorted(str) 为字符串排序。 不能用str.sort()， 因为字符串是immutable。 sorted()会create a new character list.
+  use "".join(sorted(str)) to get a sorted new string.
