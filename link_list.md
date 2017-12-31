@@ -1,17 +1,15 @@
 ## 主要算法 ##
 * 快慢指针
-* list sort
+* [sort](#Sort)
 * list merge
 * find
 * reverse
 
-Sort a linked list in O(n log n) time using constant space complexity.
-
-Example
-Given 1->3->2->null, sort it to 1->2->3->null.
-### 思路 ###
+### Sort ###
     + 要求 O(nlgn)的时间复杂度，使用mergeSort，快慢指针找到终点。
     + 每次二分完成要断成两个链表
+    + 是否可以使用更换val的方法，可以利用数组。
+* Merge Sort 解法
 ```python
 """
 Definition of ListNode
