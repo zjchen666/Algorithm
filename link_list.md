@@ -1,3 +1,10 @@
+## 主要算法 ##
+* 快慢指针
+* list sort
+* list merge
+* find
+* reverse
+
 Sort a linked list in O(n log n) time using constant space complexity.
 
 Example
@@ -37,9 +44,9 @@ class Solution:
         mid = slow.next
         slow.next = None
 
-        list1 = self.mergeSort(head)
-        list2 = self.mergeSort(mid)
-        return self.mergeList(list1, list2)
+        left = self.mergeSort(head)
+        right = self.mergeSort(mid)
+        return self.mergeList(left, right)
         
     def mergeList(self, list1, list2):
         if list1 == None:
