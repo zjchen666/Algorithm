@@ -1,18 +1,33 @@
 
-Array 问题
+Array
 ======================
+### subarray问题的主要算法 ###
+- **brtual force**
+    从第一个元素开始遍历直到结尾，依次缩短subarray长度寻找结果。时间复杂度O(n*n),不需要额外空间。
+- **presum**
+    - 令 PrefixSum[i] = nums[0] + nums[1] + ... nums[i], PrefixSum[0] = nums[0] 易知构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间 如需计算子  数组从下标i到下标j之间的所有数之和 则有 Sum(i~j) = PrefixSum[j] - PrefixSum[i-1]。
+    - 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
+- **backward and forward travesal**
+    适用于需要依次计算某一数组元素左右两边的情况。第一遍计算从1～n-1， 第二遍计算从n-2～0， 之后合并结果。
+    
+**模版**
+```python
+        array = [0 for i in range(n)]
+        # calculation from n-2 ~ 0
+        for i in xrange(n-2, -1, -1): 
+            array[i] = xxx
+            
+        # calculation from 1 ~ n-1
+        for i in xrange(1, n):
+            # combine the calculation results
+            array[i] = xxx
+```
 
 Given an integer array, find a subarray where the sum of numbers is zero. Your code should return the index of the first number and the index of the last number.
  Notice：
 There is at least one subarray that it's sum equals to zero.
 Example
 Given [-3, 1, 2, -3, 4], return [0, 2] or [1, 3].
-### 思路 ###
-   + 常规解法从第一个元素开始遍历直到结尾，依次缩短subarray长度寻找结果。时间复杂度O(n*n),不需要额外空间。
-   + prefix sum 
- 令 PrefixSum[i] = nums[0] + nums[1] + ... nums[i], PrefixSum[0] = nums[0] 易知构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间 如需计算子数组从下标i到下标j之间的所有数之和 则有 Sum(i~j) = PrefixSum[j] - PrefixSum[i-1]。
-   + 找出 Sum[i] = Sum[j] 即可。
-   + 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
  
 ```python
 import copy
@@ -98,7 +113,7 @@ class Solution:
                     result = [hash[prefixSum[i+1]]+1, hash[prefixSum[i]]]
         return result
 ```
-## Maximun Subarray 2 ##
+## Maximun Subarray IV ##
 ### 解法 ###
    1. presum 之后 brutal force 循环会超时。
    2. presum 之后 one pass，只需要记住i - k之前的最小sum即可。
