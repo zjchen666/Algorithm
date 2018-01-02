@@ -9,8 +9,6 @@ Array
     - 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
 - **backward and forward travesal**
     适用于需要依次计算某一数组元素左右两边（和/积）的情况。第一遍计算从1～n-1， 第二遍计算从n-2～0， 之后合并结果。
- 
-    **模版**
 ```python
         array = [0 for i in range(n)]
         # calculation from n-2 ~ 0
