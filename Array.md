@@ -8,9 +8,9 @@ Array
     - 令 PrefixSum[i] = nums[0] + nums[1] + ... nums[i], PrefixSum[0] = nums[0] 易知构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间 如需计算子  数组从下标i到下标j之间的所有数之和 则有 Sum(i~j) = PrefixSum[j] - PrefixSum[i-1]。
     - 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
 - **backward and forward travesal**
-    适用于需要依次计算某一数组元素左右两边的情况。第一遍计算从1～n-1， 第二遍计算从n-2～0， 之后合并结果。
-    
-**模版**
+    适用于需要依次计算某一数组元素左右两边（和/积）的情况。第一遍计算从1～n-1， 第二遍计算从n-2～0， 之后合并结果。
+ 
+    **模版**
 ```python
         array = [0 for i in range(n)]
         # calculation from n-2 ~ 0
@@ -22,7 +22,23 @@ Array
             # combine the calculation results
             array[i] = xxx
 ```
-
+- **two pointers**
+    适用与求解两个元素之间的矩阵面积一类的问题。原理是适用two pointers从两头向中间逼近。每次更换较短（小）的元素。
+```python
+    def maxArea(self, heights):
+        n = len(heights)
+        lo = 0
+        hi = n - 1
+        max_area = 0
+        while lo < hi:
+            max_area = max(max_area, min(heights[hi],heights[lo])*(hi-lo))
+            if heights[lo] <= heights[hi]:
+                lo += 1
+            else:
+                hi -= 1
+        return max_area
+```
+    
 Given an integer array, find a subarray where the sum of numbers is zero. Your code should return the index of the first number and the index of the last number.
  Notice：
 There is at least one subarray that it's sum equals to zero.
