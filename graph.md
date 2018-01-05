@@ -26,16 +26,16 @@
                dfs(w, marked)
 ```
 ### 单点可达性
-    * DFS
-    * BFS
+ * DFS
+ * BFS
 ### 检测环
-    * DFS
+ * DFS
 ### 判断联通
-    * Union Find
-    * DFS
-### 找寻所有的联通分量
-    * union find - 适合只提供边的情况。和定点的值在范围 0 ～ N的情况
-    ```python
+ * Union Find
+ * DFS
+### 找寻联通分量
+ * Union Find - 适合只提供边的情况。和定点的值在范围 0 ～ N的情况
+```python
         def find(p, id):
             while id[p] != p:
                 p = id[p]
@@ -48,23 +48,23 @@
                 id[pRoot] = qRoot
                 count -= 1
             return
-    ```
-    * DFS - 需要对图进行预处理， 适合提供完整图的情况。
-    ````python
+```
+ * DFS - 需要对图进行预处理， 适合提供完整图的情况。
+```python
         for w in nodes:
             if marked[w] != True:
                 dfs(w, marked, id)
                 count += 1
-                
+              
         def dfs(w, marked, stack):
             marked[w] = True
             id[w] = count
             for v in w.neighbors:
                 if marked[v] != True:
                     dfs(v, marked, stack)
-    ```
+```
 ### 双色问题
-    * DFS
+   * DFS
     
 ## 有向图
 ### 单点可达性
