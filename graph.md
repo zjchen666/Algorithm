@@ -34,7 +34,9 @@
  * Union Find
  * DFS
 ### 找寻联通分量
- * Union Find - 适合只提供边的情况。和定点的值在范围 0 ～ N的情况
+ * Union Find 
+     - 适合只提供边的情况。和定点的值在范围 0 ～ N的情况。
+     - 节点的顺序没有要求。
 ```python
         def find(p, id):
             while id[p] != p:
@@ -49,7 +51,9 @@
                 count -= 1
             return
 ```
- * DFS - 需要对图进行预处理， 适合提供完整图的情况。
+ * DFS 
+    - 需要对图进行预处理， 适合提供完整图的情况。
+    - 不适合二维矩阵的情况
 ```python
         for w in nodes:
             if marked[w] != True:
