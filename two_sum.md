@@ -1,8 +1,8 @@
-### Two point ###
- ## 相对 move ##
+## Two pointers ##
+ ### 相对 move ###
     * Two sum
     * Container With Most Water
- ## 同向move ##
+ ### 同向move ###
     Minimum Size Subarray Sum
     
 Given an array of integers, find how many pairs in the array such that their sum is less than or equal to a specific target number. Please return the number of pairs.
