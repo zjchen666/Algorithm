@@ -3,10 +3,33 @@ Array
 ======================
 ### subarray问题的主要算法 ###
 - **brtual force**
-    从第一个元素开始遍历直到结尾，依次缩短subarray长度寻找结果。时间复杂度O(n*n),不需要额外空间。
+    从第一个元素开始遍历直到结尾，依次缩短array长度寻找结果。时间复杂度O(n*m),不需要额外空间。
 - **presum**
     - 令 PrefixSum[i] = nums[0] + nums[1] + ... nums[i], PrefixSum[0] = nums[0] 易知构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间 如需计算子  数组从下标i到下标j之间的所有数之和 则有 Sum(i~j) = PrefixSum[j] - PrefixSum[i-1]。
     - 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
+- **product**
+   subarray 乘法技巧， 用两个数组分别记录最大值和最小值。遇到负值就切到最小值数组，再遇到就再切回max数组。遇到零下一个元素重置。
+```python
+    def maxProduct(self, nums):
+        n = len(nums)
+        
+        max_val = [0 for i in range(n)]
+        min_val = [0 for i in range(n)]
+        max_val[0] = nums[0]
+        min_val[0] = nums[0]
+        
+        for i in range(1, n):
+            max_val[i] = nums[i]
+            min_val[i] = nums[i]
+            if nums[i] >= 0:
+                max_val[i] = max(max_val[i], max_val[i-1]*nums[i])
+                min_val[i] = min(min_val[i], min_val[i-1]*nums[i])
+            if nums[i] < 0:
+                max_val[i] = max(max_val[i], min_val[i-1]*nums[i])
+                min_val[i] = min(min_val[i], max_val[i-1]*nums[i])
+        return max(max_val)
+```
+   
 - **backward and forward travesal**
     适用于需要依次计算某一数组元素左右两边（和/积）的情况。第一遍计算从1～n-1， 第二遍计算从n-2～0， 之后合并结果。
 ```python
