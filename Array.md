@@ -64,7 +64,21 @@ Array
                 hi -= 1
         return max_area
 ```
-    
+- **remove element**
+```python
+    def removeElement(self, A, elem):
+        # write your code here
+        if not A:
+            return 0
+        
+        index = 0
+        for i in range(len(A)):
+            if A[i] != elem:
+                A[index] = A[i]
+                index += 1
+        return index
+```
+
 Given an integer array, find a subarray where the sum of numbers is zero. Your code should return the index of the first number and the index of the last number.
  Notice：
 There is at least one subarray that it's sum equals to zero.
