@@ -5,7 +5,12 @@ Array
 * 一个数组的subarray共有(n+1)*n/2。
 * 一个数组的sequence有2^n。
 * 一个数组的permutation有n!个
-   
+## 主要问题 ##
+   *[Two Pointers](/two_sum.md)
+   * subarray 问题
+   * sorted array 问题
+   * subsequence 问题
+   
 ### subarray问题的主要算法 ###
 - **brtual force**
     从第一个元素开始遍历直到结尾，依次缩短array长度寻找结果。时间复杂度O(n*m),不需要额外空间。
