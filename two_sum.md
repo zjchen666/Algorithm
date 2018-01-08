@@ -1,4 +1,11 @@
 ## Two pointers ##
+ ### 主要题型 ###
+ * array partition - move 比k小的到左边，大的到右边
+ * two sum求和， 先sort，然后往中间移动。
+ * remove duplicate。同向双指针，慢的存留下的元素最后位置的index， 快的往前找不重复的元素。
+ * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
+ * intersection of two arrays. 先sort然后同向移动，找出相同的值。
+ * subarray问题，一般都是要先求presum。
  ### 相对 move ###
     * Two sum
     * Container With Most Water
