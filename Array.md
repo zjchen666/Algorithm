@@ -8,8 +8,8 @@ Array
 ## 主要问题 ##
 *[Two Pointers](/two_sum.md)
 *[subarray 问题](#Subarray)
-*[sorted array 问题]
-*[subsequence 问题]
+*[sorted array 问题](#Sorted Array)
+*[subsequence 问题](#Subsequence)
    
 ## Subarray ##
 ### 主要算法 ###
