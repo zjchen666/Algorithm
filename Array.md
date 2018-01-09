@@ -2,15 +2,16 @@
 Array
 ======================
 ## 数组的时间复杂度 ##
-* 一个数组的subarray共有(n+1)*n/2。
-* 一个数组的sequence有2^n。
-* 一个数组的permutation有n!个
+* 一个数组的subarray共有(n+1)*n/2。O(n^2)
+* 一个数组的sequence有2^n。O(2^n)
+* 一个数组的permutation有n!个 O(n!)
+
 ## 主要问题 ##
 * [Two Pointers](/two_sum.md)
-* [subarray 问题](#Subarray)
-* [sorted array 问题](#SortedArray)
-* [subsequence 问题](#Subsequence)
-   
+* [Subarray 问题](#subarray)
+* [Sorted Array 问题](#sorted-array)
+* [Subsequence 问题](#subsequence)
+
 ## Subarray ##
 
 ### 主要算法 ###
@@ -235,4 +236,4 @@ class Solution:
 
         return result
 ```
-## SortedArray ##
+## Sorted Array ##
