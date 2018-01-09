@@ -50,7 +50,7 @@ Array
  
  ### 解法 ###
  * 相对move - Two elements, Container With Most Water, partition array. 
- * 同向move - remove duplicate, intersection of arrays.
+ * 同向move - remove duplicate, intersection of arrays, presum.
 
 ## Subarray ##
 ### 主要算法 ###
