@@ -1,4 +1,3 @@
-
 Array
 ======================
 ## 数组的时间复杂度 ##
@@ -6,14 +5,40 @@ Array
 * 一个数组的sequence有2^n。O(2^n)
 * 一个数组的permutation有n!个 O(n!)
 
-## 主要问题 ##
-* [Two Pointers](/two_sum.md)
+## 问题分类 ##
+* [Two Pointers](#two-pointers)
 * [Subarray 问题](#subarray)
 * [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
 
-## Subarray ##
+## Two pointers ##
+ ### 模板 ###
+ ```python
+     def two_pointers(self, array, target):
+         lo = 0
+         hi = len(array) - 1
+         while lo < hi:
+             while lo < hi and array[lo] > target:
+                 lo += 1
+             while lo < hi and array[hi] <= target:
+                 hi -= 1
+             if lo < hi:
+                 array[lo], array[hi] = array[hi], array[lo]:
+         return
+ ```
+ ### 主要题型 ###
+ * partition array - move 比k小的到左边，大的到右边
+ * two element运算， 求和，差，积，etc。 先sort，然后往中间移动。
+ * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
+ * remove duplicate。同向双指针，慢的存留下的元素最后位置的index， 快的往前找不重复的元素。
+ * intersection of two arrays. 先sort然后同向移动，找出相同的值。
+ * subarray问题，一般都是要先求presum。
+ 
+ ### 解法 ###
+ * 相对move - Two elements, Container With Most Water, partition array. 
+ * 同向move - remove duplicate, intersection of arrays.
 
+## Subarray ##
 ### 主要算法 ###
 - **brtual force**
     从第一个元素开始遍历直到结尾，依次缩短array长度寻找结果。时间复杂度O(n*m),不需要额外空间。
