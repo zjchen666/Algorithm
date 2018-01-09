@@ -14,6 +14,7 @@ Array
 ## Two pointers ##
  ### 模板 ###
  ```python
+     # partition
      def two_pointers(self, array, target):
          lo = 0
          hi = len(array) - 1
@@ -25,7 +26,20 @@ Array
              if lo < hi:
                  array[lo], array[hi] = array[hi], array[lo]:
          return
- ```
+
+    # remove element
+    def removeElement(self, A, elem):
+        # write your code here
+        if not A:
+            return 0
+        
+        index = 0
+        for i in range(len(A)):
+            if A[i] != elem:
+                A[index] = A[i]
+                index += 1
+        return index
+```
  ### 主要题型 ###
  * partition array - move 比k小的到左边，大的到右边
  * two element运算， 求和，差，积，etc。 先sort，然后往中间移动。
@@ -81,36 +95,8 @@ Array
             # combine the calculation results
             array[i] = xxx
 ```
-- **two pointers**
-    适用与求解两个元素之间的矩阵面积一类的问题。原理是适用two pointers从两头向中间逼近。每次更换较短（小）的元素。
-```python
-    def maxArea(self, heights):
-        n = len(heights)
-        lo = 0
-        hi = n - 1
-        max_area = 0
-        while lo < hi:
-            max_area = max(max_area, min(heights[hi],heights[lo])*(hi-lo))
-            if heights[lo] <= heights[hi]:
-                lo += 1
-            else:
-                hi -= 1
-        return max_area
-```
-- **remove element**
-```python
-    def removeElement(self, A, elem):
-        # write your code here
-        if not A:
-            return 0
-        
-        index = 0
-        for i in range(len(A)):
-            if A[i] != elem:
-                A[index] = A[i]
-                index += 1
-        return index
-```
+
+
 
 Given an integer array, find a subarray where the sum of numbers is zero. Your code should return the index of the first number and the index of the last number.
  Notice：
