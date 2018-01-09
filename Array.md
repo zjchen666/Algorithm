@@ -8,7 +8,7 @@ Array
 ## 主要问题 ##
 * [Two Pointers](/two_sum.md)
 * [subarray 问题](#Subarray)
-* [sorted array 问题](#Sorted Array)
+* [sorted array 问题](#SortedArray)
 * [subsequence 问题](#Subsequence)
    
 ## Subarray ##
@@ -235,4 +235,4 @@ class Solution:
 
         return result
 ```
-## Sorted Array ##
+## SortedArray ##
