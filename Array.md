@@ -163,7 +163,8 @@ class Solution:
             sum += nums[i]
             prefixSum.append(sum)
             if sum in hash:
-                return [hash[sum]+1, i]
+
+return [hash[sum]+1, i]
             else:
                 hash[sum] = i
         prefixSum.sort()
@@ -234,3 +235,4 @@ class Solution:
 
         return result
 ```
+## Sorted Array ##
