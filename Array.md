@@ -49,7 +49,7 @@ Array
  * subarray问题，一般都是要先求presum。
  
  ### 解法 ###
- * 相对move - Two elements, Container With Most Water, partition array. 
+ * 相对move - Two elements, Container With Most Water, partition array, subarray. 
  * 同向move - remove duplicate, intersection of arrays, presum.
 
 ## Subarray ##
