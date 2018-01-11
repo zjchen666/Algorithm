@@ -12,8 +12,8 @@ Array
 * [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
 ## Array rotation ##
-  ### 解法 ###
-  *三步反转法
+### 解法 ###
+   * 三步反转法
 ```python
         #left
         lo = 0
