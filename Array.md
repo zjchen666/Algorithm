@@ -6,11 +6,39 @@ Array
 * 一个数组的permutation有n!个 O(n!)
 
 ## 问题分类 ##
-* [Two Pointers](#two-pointers)
+* [array rotation](#array-rotation)
+* [Two Pointers 问题](#two-pointers)
 * [Subarray 问题](#subarray)
 * [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
+## Array rotation ##
+  ### 解法 ###
+  *三步反转法
+```python
+        #left
+        lo = 0
+        hi = k
+        while lo < hi:
+            nums[lo], nums[hi] = nums[hi], nums[lo]
+            lo += 1
+            hi -= 1
 
+        #right
+        lo = k + 1
+        hi = n - 1
+        while lo < hi:
+            nums[lo], nums[hi] = nums[hi], nums[lo]
+            lo += 1
+            hi -= 1
+
+        #the whole array
+        lo = 0
+        hi = n - 1
+        while lo < hi:
+            nums[lo], nums[hi] = nums[hi], nums[lo]
+            lo += 1
+            hi -= 1
+```
 ## Two pointers ##
  ### 模板 ###
  ```python
