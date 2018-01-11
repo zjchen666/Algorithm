@@ -59,6 +59,27 @@ Array
 - **presum**
     - 令 PrefixSum[i] = nums[0] + nums[1] + ... nums[i], PrefixSum[0] = nums[0] 易知构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间 如需计算子  数组从下标i到下标j之间的所有数之和 则有 Sum(i~j) = PrefixSum[j] - PrefixSum[i-1]。
     - 需要排序的话，使用hashtable作为数据结构存储index和presum的mapping。注意subarray的起始点是hash[sum]+1 而不是hash[sum]
+```python
+    pre_sum = [0 for i in range(n)]
+    pre_sum[0] = nums[0]
+    
+    for i in xrange(1, n):
+        pre_sum[i] = pre_sum[i-1] + nums[i]
+   
+    #maximum subarray sum
+    min_pre = 0
+    max_sum = nums[0]
+    for i in xrange(1, n):
+        min_pre = min(min_pre, pre_sum[i-1])
+        max_sum = max(max_sum, pre_sum[i]-min_pre)
+        
+    #minimum subarray sum
+    max_pre = 0
+    min_sum = nums[0]
+    for i in xrange(1, n):
+        max_pre = max(max_pre, pre_sum[i-1])
+        min_sum = max(min_sum, pre_sum[i]-max_pre)
+```
 - **product**
    subarray 乘法技巧， 用两个数组分别记录最大值和最小值。遇到负值就切到最小值数组，再遇到就再切回max数组。遇到零下一个元素重置。
 ```python
