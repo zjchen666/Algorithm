@@ -304,3 +304,29 @@ class Solution:
    
 ## Interval ##
    * 扫描线法
+```python
+    def helper(self, x, y):
+        if x[0] != y[0]:
+            return x[0] - y[0]
+        else:
+            return x[1] - y[1]
+
+    def countOfAirplanes(self, airplanes):
+        # write your code here
+        if not airplanes:
+            return 0
+            
+        n = len(airplanes)
+        times = []
+        for i in range(n):
+            times.append([airplanes[i].start, 1])
+            times.append([airplanes[i].end, -1])
+            
+        times.sort(cmp = self.helper)
+        most = 0
+        count = 0
+        for time in times:
+            count += time[1]
+            most = max(most, count)
+        return most
+```
