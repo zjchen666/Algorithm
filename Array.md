@@ -11,7 +11,7 @@ Array
 * [Subarray 问题](#subarray)
 * [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
-* [interval 问题](#inteval)
+* [interval 问题](#interval)
 
 ## Array rotation ##
 ### 解法 ###
