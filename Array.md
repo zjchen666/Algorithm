@@ -11,6 +11,8 @@ Array
 * [Subarray 问题](#subarray)
 * [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
+* [interval 问题](#inteval)
+
 ## Array rotation ##
 ### 解法 ###
    * 三步反转法
@@ -297,3 +299,8 @@ class Solution:
         return result
 ```
 ## Sorted Array ##
+### 主要问题 ###
+   * find peak
+   
+## Interval ##
+   * 扫描线法
