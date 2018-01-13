@@ -1,5 +1,4 @@
 ## Sorted Array ##
-   *
    * Quick Sort
    * Merge Sort
    * Select Sort
