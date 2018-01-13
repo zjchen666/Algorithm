@@ -6,13 +6,13 @@ Array
 * 一个数组的permutation有n!个 O(n!)
 
 ## 问题分类 ##
-* [array rotation](#array-rotation)
+* [Array rotation](#array-rotation)
 * [Two Pointers 问题](#two-pointers)
 * [Subarray 问题](#subarray)
 * [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
-* [interval 问题](#interval)
-
+* [Interval 问题](#interval)
+* [Select 问题](/quicksort_mergesort.md)
 ## Array rotation ##
 ### 解法 ###
    * 三步反转法
