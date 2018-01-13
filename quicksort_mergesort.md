@@ -1,4 +1,11 @@
-Quick Sort and Merge Sort
+## Sorted Array ##
+   * Quick Sort
+   * Merge Sort
+   *
+### 主要问题 ###
+   * find peak
+
+
 =================
 
 ### QuickSort ###
