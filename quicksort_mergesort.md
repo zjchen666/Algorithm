@@ -1,7 +1,7 @@
 ## Sorted Array ##
    * Quick Sort
    * Merge Sort
-   * Select Sort
+   * Select Sort
    * Insert Sort
    * Bubble Sort
    * Quick Select
