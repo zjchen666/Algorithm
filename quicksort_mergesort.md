@@ -1,7 +1,12 @@
 ## Sorted Array ##
+   *
    * Quick Sort
    * Merge Sort
-   *
+   * Select Sort
+   * Insert Sort
+   * Bubble Sort
+   * Quick Select
+   
 ### 主要问题 ###
    * find peak
 
