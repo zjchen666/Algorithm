@@ -9,10 +9,10 @@ Array
 * [Array rotation](#array-rotation)
 * [Two Pointers 问题](#two-pointers)
 * [Subarray 问题](#subarray)
-* [Sorted Array 问题](#sorted-array)
 * [Subsequence 问题](#subsequence)
 * [Interval 问题](#interval)
-* [Select 问题](/quicksort_mergesort.md)
+* [Select and Sort](/quicksort_mergesort.md)
+
 ## Array rotation ##
 ### 解法 ###
    * 三步反转法
@@ -298,9 +298,6 @@ class Solution:
 
         return result
 ```
-## Sorted Array ##
-### 主要问题 ###
-   * find peak
    
 ## Interval ##
    * 扫描线法
