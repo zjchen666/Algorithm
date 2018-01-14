@@ -6,7 +6,7 @@
    * Bucket Sort
    * Insert Sort
    * Bubble Sort
-   * Quick Select
+   * [Quick Select](#quick-select)
 
 ### 各种排序性能及稳定性比较 ###
 
@@ -52,8 +52,9 @@ class Solution:
         self.quickSort(A, start, right)
         self.quickSort(A, left, end)
 ```
-## Quick Select ###
-   + 用途： 数组中求第K大，第K小的数。
+### Quick Select ###
+   + 用途： 数组中求第K大从后向前数，第K小的数（从前向后）。
+   
 ```python
 class Solution:
     """
@@ -61,43 +62,31 @@ class Solution:
     @param: nums: An integer array
     @return: kth smallest element
     """
-    def kthSmallest(self, k, nums):
-        # write your code here
-        start = 0
-        end = len(nums) - 1
-        self.result = 0
-        self.quickSelect(k, nums, start, end)
-        return self.result
-        
-    def quickSelect(self, k, nums, start, end):
-        # write your code here
+    def quickSelect(self, start, end, k, nums):
         if start == end:
-            self.result = nums[start]
-            return
-            
-        i = start
-        j = end
-        pivot = nums[i + (j - i)/2]
+            print nums
+            return nums[start]
+
+        lo = start
+        hi = end
+        pivot = nums[lo + (hi-lo)/2]
         
-        while i <= j:
-            while i <= j and nums[j] > pivot:
-                j -= 1
-            while i <= j and nums[i] < pivot:
-                i += 1
-            if i <= j:
-                nums[i], nums[j] = nums[j], nums[i]
-                i += 1
-                j -= 1
-        if k - 1 <= j: 
-            self.quickSelect(k, nums, start, j)
-            
-        if k - 1 >= i:
-            self.quickSelect(k, nums, i, end)
-        # case 1: [j][k][i]
-        # case 2: [j][i] 
-        if k - 1 < i and k - 1 > j:
-            self.result = nums[k-1]
-            return
+        while lo <= hi:
+            while lo <= hi and nums[hi] > pivot:
+                hi -= 1
+            while lo <= hi and nums[lo] < pivot:
+                lo += 1
+            if lo <= hi:
+            	nums[lo], nums[hi] = nums[hi], nums[lo]
+            	lo += 1
+            	hi -= 1
+        
+        if k <= hi:
+            return self.quickSelect(start, hi, k, nums)
+        elif k >= lo:
+            return self.quickSelect(lo, end, k, nums)
+        else:
+            return nums[k]
 ```
 ## MergeSort ##
 ```python
