@@ -54,6 +54,25 @@ class Solution:
         self.quickSort(A, start, right)
         self.quickSort(A, left, end)
 ```
+### 3-Way Quick Sort ###
+   * 3 way partition
+```pythion
+    def partition(self, lo, hi, nums):
+	i = lo
+	pivot = lo + (hi - lo)/2
+	
+	while i < hi:
+	    if nums[i] < pivot:
+	    	nums[i], nums[lo] = nums[lo], nums[i]
+		i += 1
+		lo += 1
+	    elif nums[i] > pivot:
+	        nums[i], nums[hi] = nums[hi], nums[lo]
+		hi -= 1
+	    else:
+	        i += 1
+```
+
 ### Quick Select ###
    + 用途： 数组中求第K大从后向前数，第K小的数（从前向后）。
    
