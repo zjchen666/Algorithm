@@ -1,11 +1,15 @@
-## Sorted Array ##
+## Sort Algrithom ##
    * Quick Sort
    * Merge Sort
    * Select Sort
+   * Heap Sort
+   * Bucket Sort
    * Insert Sort
    * Bubble Sort
    * Quick Select
-   
+
+### 各种排序性能及稳定性比较 ###
+
 ### 主要问题 ###
    * find peak
 
