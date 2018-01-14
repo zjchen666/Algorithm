@@ -1,5 +1,7 @@
 ## Sort Algrithom ##
    * Quick Sort
+      * [QuickSort]
+      * [3-way QuickSort]
    * Merge Sort
    * Select Sort
    * Heap Sort
