@@ -3,6 +3,7 @@
       * [QuickSort]
       * [3-way QuickSort]
    * Merge Sort
+   * [Counting Sort](#counting-sort)
    * Select Sort
    * Heap Sort
    * Bucket Sort
@@ -17,7 +18,25 @@
 
 
 =================
+### Counting Sort ###
+```python
+    def counting_sort(self, nums, k):
+        
+        count = [0 for i in range(k+1)]
+        results = [0 for i in range(len(nums))]
+        
+        for num in nums:
+            count[num] += 1
 
+        for i in range(1, k+1):
+            count[i] += count[i-1]
+
+        for i in range(len(nums)-1, -1, -1):
+            results[count[nums[i]]-1] = nums[i]
+            count[nums[i]] -= 1
+
+        return results
+```
 ### QuickSort ###
 
 ```python
