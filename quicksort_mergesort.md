@@ -17,6 +17,7 @@
 | Counting Sort | Yes | O(n) | K + N |
 | Quick Sort    | No | O(nlogn) | 0 |
 | Merge Sort    | Yes | O(nlogn) | N |
+| Insertion Sort    | Yes | O(n^2) | 0 |
 
 ### 主要问题 ###
    * find peak
