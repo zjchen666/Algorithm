@@ -12,6 +12,11 @@
    * [Quick Select](#quick-select)
 
 ### 各种排序性能及稳定性比较 ###
+| Algrithm    | Stability  |   Time Complexity   | Extra Space |
+| ------------- | ---------- | -----------------   | ------------|
+| Counting Sort | Yes | O(n) | K + N |
+| Quick Sort    | No | O(nlogn) | 0 |
+| Merge Sort    | Yes | O(nlogn) | N |
 
 ### 主要问题 ###
    * find peak
