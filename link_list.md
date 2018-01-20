@@ -1,11 +1,15 @@
 ## 主要算法 ##
-* 快慢指针
 * [sort](#Sort)
-* list merge
+* merge
 * find
 * reverse
 * partition
 
+### 解题思路及技巧 ###
+ * 利用快慢指针解决circle的问题及二分的问题。
+ * reverse相关操作可以利用stack，主要要存link lisk元素的value，实在不行也可以直接存元素。
+ * 直接交换value也可以考虑，但要确定是否允许。
+ 
 ### Sort ###
     + 要求 O(nlgn)的时间复杂度，使用mergeSort，快慢指针找到终点。
     + 每次二分完成要断成两个链表
