@@ -1,5 +1,5 @@
 ## 主要算法 ##
-* [sort](#Sort)
+* [sort](#sort)
 * merge
 * find
 * reverse
