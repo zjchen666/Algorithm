@@ -4,6 +4,7 @@
 * find
 * reverse
 * partition
+* clone
 
 ### 解题思路及技巧 ###
  * 利用快慢指针解决circle的问题及二分的问题。
@@ -13,7 +14,8 @@
 ### Sort ###
     + 要求 O(nlgn)的时间复杂度，使用mergeSort，快慢指针找到终点。
     + 每次二分完成要断成两个链表
-    + 是否可以使用更换val的方法，可以利用数组。
+    + 是否可以使用更换val的方法，可以利用数组。
+
 * Merge Sort 解法
 ```python
 """
