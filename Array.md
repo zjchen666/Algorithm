@@ -69,6 +69,16 @@ Array
                 A[index] = A[i]
                 index += 1
         return index
+        
+    # forward pointer 
+     for i in range(n):
+         while j < n:
+             if (condition):
+                 j += 1
+                 udpate j 
+             else:
+                 break
+         update i
 ```
  ### 主要题型 ###
  * partition array - move 比k小的到左边，大的到右边
@@ -77,10 +87,11 @@ Array
  * remove duplicate。同向双指针，慢的存留下的元素最后位置的index， 快的往前找不重复的元素。
  * intersection of two arrays. 先sort然后同向移动，找出相同的值。
  * subarray问题，一般都是要先求presum。
+ * window 问题， 前向指针。
  
  ### 解法 ###
- * 相对move - Two elements, Container With Most Water, partition array, subarray. 
- * 同向move - remove duplicate, intersection of arrays, presum.
+ * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
+ * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
 
 ## Subarray ##
 ### 主要算法 ###
