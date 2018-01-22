@@ -70,7 +70,8 @@ Array
                 index += 1
         return index
         
-    # forward pointer 
+    # forward pointers:
+     j = 0
      for i in range(n):
          while j < n:
              if (condition):
