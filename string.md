@@ -13,7 +13,9 @@ Return a string of one character whose ASCII code is the integer i. For example,
 ord() inverse of chr().
 int()
 
-### 主要考点 ###
+### 主要解题思路 ###
 * 排序
 * 子字符串查找
 * 模拟算法
+* two pointers
+* hash table
