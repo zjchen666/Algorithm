@@ -16,6 +16,27 @@
    * 找最后一个降序。 最后一个 nums[i] > nums[i+1]
    * 找最后一个比nums[i]小的num。
    * 将nums[i+1:] reverse. -> 注意不需要排序， 为什么？（第一步可以保证）
-
+```python
+   def nextPermutation(self, nums):
+       n = len(nums)
+       lo = -1
+       for i in range(n-2, -1, -1):
+           if nums[i] < nums[i+1]:
+               lo = i
+               break
+       
+       if lo == -1:
+           nums.reverse()
+           return nums
+           
+       hi = lo + 1 
+       for i in range(n-1, lo, -1):
+           if nums[i] > nums[lo]:
+               hi = i
+               break
+       nums[lo], nums[hi] = nums[hi], nums[lo]
+       nums[lo+1:] = nums[n-1:lo:-1]
+       return nums
+```
 ### 全排列去重 ###
 1. 交换法， 遇重不交换。
