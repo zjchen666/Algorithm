@@ -70,7 +70,7 @@ Array
                 index += 1
         return index
         
-    # forward pointers:
+    # window 类 forward pointers O(n^2):
      j = 0
      for i in range(n):
          while j < n:
