@@ -17,7 +17,7 @@ set(['a', 'c', 'b', ',']
   set(a)
   set(['a', 'c', 'b'])
 * hash table  可以存储link list 的node
-* list 不能用做hash的key。list is unhashable.
+* list 不能用做hash的key。__list is unhashable__.
 * for key in hash 注意是key不是val。
 * dict.clear() 删除字典中所有元素
 * dict.copy() 返回字典(浅复制)的一个副本
