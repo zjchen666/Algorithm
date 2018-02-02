@@ -89,6 +89,7 @@ Array
  * intersection of two arrays. 先sort然后同向移动，找出相同的值。
  * subarray问题，一般都是要先求presum。
  * window 问题， 前向指针。
+    + Minimum Window Substring
  
  ### 解法 ###
  * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
