@@ -18,4 +18,4 @@ int()
 * 子字符串查找
 * 模拟算法
 * two pointers
-* hash table
+* hash table(可以用size 为 128 byte的数组替换)
