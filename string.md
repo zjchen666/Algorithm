@@ -22,7 +22,8 @@ int()
 * DP
 
 ### string DP 问题 ###
-思路：使用二维矩阵, 填充true/false 还是计算的结果lenght？
-* longest palindrome substring
-* edit distance.
+思路：使用二维矩阵, 填充true/false 还是计算的结果length？数组的size是n 还是n+1？
+* Longest palindrome substring
+* Edit distance.
+* Longest commom sequence.
 
