@@ -19,3 +19,10 @@ int()
 * 模拟算法
 * two pointers
 * hash table(可以用size 为 128 byte的数组替换)
+* DP
+
+### string DP 问题 ###
+思路：使用二维矩阵, 填充true/false 还是计算的结果lenght？
+* longest palindrome substring
+* edit distance.
+
