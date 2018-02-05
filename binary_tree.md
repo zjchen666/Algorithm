@@ -1,12 +1,18 @@
 
 ## 主要知识点 ##
-   + Traverse，自顶向下。
-   + Divid Conquer. 自下而上。90%的二叉树问题都可以用 Divide Conquer。
+   + 二叉树的概念： 
+      * 二叉搜素树 binary search tree: 所有left node都小于root，与heap区别？
+      * 完全二叉树 complete binary tree：heap的数据结构
+      * 满二叉树 full binary tree：
+      * 平衡二叉树 balanced binary tree：
+   + 解题思路：
+     * Traverse，自顶向下。
+     * Divid Conquer. 自下而上。90%的二叉树问题都可以用 Divide Conquer。
    + 理解 DFS, traverse and divide-conquer。 traverse and divide-conquer 都属于 DFS。
      traverse 传参数， divide-conquer 返回值。
-   + 二叉树的递归与非递归遍历。
-   + 平衡二叉树
-    
+   + 二叉树的递归与非递归遍历，preorder， inorder， postorder。
+   + Convert preorder/inorder/postorder into binary tree. -> Divid conquer.
+    
 ## 遍历 ##
 ## Pre-order Recursion and Non-recursion
 ```python
