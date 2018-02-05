@@ -11,7 +11,7 @@
 3. 理解 DFS, traverse and divide-conquer。 traverse and divide-conquer 都属于 DFS。
       traverse 传参数， divide-conquer 返回值。
 4. 二叉树的递归与非递归遍历，preorder， inorder， postorder。
-5. Convert preorder/inorder/postorder into binary tree. -> Divid conquer.
+5. Convert preorder/inorder/postorder into binary tree. -> Divid conquer. 注意如何找root，如何slice左右子树。
     
 ## 遍历 ##
 ## Pre-order Recursion and Non-recursion
