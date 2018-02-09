@@ -6,6 +6,6 @@
 * [Graph](/graph.md)
 * [Tree](/tree.md)
 * [String](/string.md)
-* [Math](/string.md)
+* [Math](/math.md)
 
 
