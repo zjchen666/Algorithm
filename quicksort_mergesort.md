@@ -1,7 +1,7 @@
 ## Sort Algrithom ##
    * Quick Sort
       * [QuickSort]
-      * [3-way QuickSort](#3-Way-QuickSort)
+      * [3 Way QuickSort](#3-way-quickSort)
    * Merge Sort
    * [Counting Sort](#counting-sort)
    * Select Sort
