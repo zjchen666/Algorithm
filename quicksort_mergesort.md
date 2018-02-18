@@ -1,7 +1,7 @@
 ## Sort Algrithom ##
    * Quick Sort
       * [QuickSort]
-      * [3-way QuickSort]
+      * [3-way QuickSort](#3-Way QuickSort)
    * Merge Sort
    * [Counting Sort](#counting-sort)
    * Select Sort
@@ -80,7 +80,7 @@ class Solution:
         self.quickSort(A, start, right)
         self.quickSort(A, left, end)
 ```
-### 3-Way Quick Sort ###
+### 3-Way QuickSort ###
    * 3 way partition
 ```pythion
     def partition(self, lo, hi, nums):
