@@ -2,7 +2,7 @@
 * [hash table and hash set](#hash)
 * [array](#array) 
 * [string](#string)
-
+* [lib](#lib)
 ### hash
 - if i not in dict() 要比 if i in dict() 耗时。前者O（n）后者O（1）。
    用 if None == dict.get() 最快
@@ -32,7 +32,7 @@ set(['a', 'c', 'b', ',']
 ```python
 matrix = [[0 for i in range(3)] for i in range(3)]
 ```
-以下是错误的因为这个二维数组的每一个obj都是一样的
+以下仅用于创建一维数组，每一个obj都是一样的
 ```python
 >>> a = [[1]] * 5
 >>> a
@@ -66,3 +66,18 @@ matrix = [[0 for i in range(3)] for i in range(3)]
 ### string
   可以使用 sorted(str) 为字符串排序。 不能用str.sort()， 因为字符串是immutable。 sorted()会create a new character list.
   use "".join(sorted(str)) to get a sorted new string.
+
+### lib
+* binary search
+```python
+     import bisect
+     # input array 必须是sorted
+     # array[index:] >= val
+     index = bisect.bisect_left(array, val)
+     # array[index:] > val
+     index = bisect.bisect_right/bisect.bisect(array, val)
+     # 查找并插入
+     bisect.insort_left(array, val)
+     bisect.insort_right(array, val)/bisect.insort(array, val）
+```
+* priority queue
