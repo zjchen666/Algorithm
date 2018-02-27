@@ -7,10 +7,10 @@
 
 ### math
   divide 取整分类：
-  - 向下向上取整： math.floor() math.ceil()
-  - 向零取整：int()
-  - // 向下取整
-  - / 精确除法（python3）， 向下取整（python2）
+  - 向下向上取整： math.floor() math.ceil()
+  - 向零取整：int()
+  - // 向下取整
+  - / 精确除法（python3）， 向下取整（python2）
 
 ### hash
 - if i not in dict() 要比 if i in dict() 耗时。前者O（n）后者O（1）。
