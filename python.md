@@ -5,6 +5,10 @@
 * [lib](#lib)
 * [math](#math)
 
+### value
+正无穷 - float("inf"), 
+负无穷 - float("-inf")
+
 ### math
   divide 取整分类：
   - 向下向上取整： math.floor() math.ceil()
