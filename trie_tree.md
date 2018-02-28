@@ -5,7 +5,11 @@ Trie Tree
 - 创建
 - 查找
 - 删除
-- 前缀
+- 求公共前缀
+
+### 主要问题 ###
+- 前缀问题 比hash table快
+- 空间优化 hash table的字符串相关问题， 
 
 ### 数据结构 ###
   hash table - setdefault()
@@ -39,7 +43,6 @@ class Trie(object):
         :type word: str
         :rtype: bool
         """
-        print word
         node = self.root
         for c in word:
             if c not in node:
