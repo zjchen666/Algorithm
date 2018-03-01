@@ -1,5 +1,5 @@
 ## heap ##
-
+### python PQ 库函数
 ```python
 import heapq
 
@@ -15,3 +15,7 @@ list = heapq.nsmallest(heap)
 list = heapq.nlargest(heap)
 
 ```
+### 时间复杂度：
+   create heap - O(N)
+   insert - O(logN)
+   delete - O(logN)
