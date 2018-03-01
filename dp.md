@@ -17,4 +17,31 @@
 #### 坐标型动态规划
    一般不需要多分配元素，f 为 m * n 矩阵.
   
- 
+
+#### 区间型动态规划
+   - f 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
+   - 按照对角线初始化以及搜索。  
+   
+```python
+        n = len(s)
+        f = [[False for i in range(n)] for j in range(n)]
+        
+        # length == 1
+        for i in xrange(n):
+            f[i][i] = 1
+        
+        # length == 2
+        for i in xrange(n-1):
+            f[i][i+1] = 2 if s[i] == s[i+1] else 1
+            
+        # len 3 -> n
+        for length in xrange(3, n + 1):
+            for i in xrange(n + 1 - length):
+                j = i + length - 1
+                if s[i] == s[j] and f[i+1][j-1]:
+                    f[i][j] = f[i+1][j-1] + 2
+                else:
+                    f[i][j] = max(f[i+1][j], f[i][j+1])
+
+        return f[0][-1]
+```
