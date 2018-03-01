@@ -16,6 +16,6 @@ list = heapq.nlargest(heap)
 
 ```
 ### 时间复杂度：
-   create heap - O(N)
-   insert - O(logN)
-   delete - O(logN)
+   create heap - O(N)  
+   insert - O(logN)  
+   delete - O(logN)  
