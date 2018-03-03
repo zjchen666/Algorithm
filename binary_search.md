@@ -3,7 +3,7 @@
 * multi array
 
 
-### 查找 target 所在的范围
+### 查找 target
 ```python
    def binarySearch(self, array, target):
         n = len(array)
@@ -24,7 +24,7 @@
         return -1
 ```
 
-### 查找 index
+### 查找 Position
    - 返回index 其中 a[index] >= target or a[index] > target  
    - 适用于DP的二分优化
 ```python
