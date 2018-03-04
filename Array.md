@@ -56,19 +56,6 @@ Array
              if lo < hi:
                  array[lo], array[hi] = array[hi], array[lo]:
          return
-
-    # remove element
-    def removeElement(self, A, elem):
-        # write your code here
-        if not A:
-            return 0
-        
-        index = 0
-        for i in range(len(A)):
-            if A[i] != elem:
-                A[index] = A[i]
-                index += 1
-        return index
  ```       
  ### 主要题型 ###
  * partition array - move 比k小的到左边，大的到右边
@@ -86,10 +73,10 @@ Array
       + 两种类型: __快慢指针__ 和 __窗口问题__  
       + 窗口问题 分两种：  
       1. window 从头到尾：
-       -  主要是用来优化两层for循环。 
-       -  外层仍然需要从头到尾遍历。  
-       -  内层不需要回退！
-       -  题目：[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
+- 主要是用来优化两层for循环。 
+- 外层仍然需要从头到尾遍历。  
+- 内层不需要回退！
+- 题目：[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
 
 ```python
     # window 类 forward pointers 优化 O(N^2) 到 O(N):
@@ -103,6 +90,7 @@ Array
                  break
          update i
 ```
+
 2. window 慢指针不用走到尾：  
           - 主要适用与 remove duplicate 一类问题.  
 ```python
