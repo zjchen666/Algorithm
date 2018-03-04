@@ -84,14 +84,15 @@ Array
  * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
  
       + 两种类型: __快慢指针__ 和 __窗口问题__  
-      + 窗口问题适用题目：  
-          -  主要是用来优化两层for循环。  
-          -  外层仍然需要从头到尾遍历。  
-          -  内层不需要回退！  
-      + [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
- 
+      + 窗口问题 分两种：  
+      1. window 从头到尾：
+       -  主要是用来优化两层for循环。 
+       -  外层仍然需要从头到尾遍历。  
+       -  内层不需要回退！
+       -  题目：[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
+
 ```python
-    # window 类 forward pointers O(n^2):
+    # window 类 forward pointers 优化 O(N^2) 到 O(N):
      j = 0
      for i in range(n):
          while j < n:
@@ -101,6 +102,23 @@ Array
              else:
                  break
          update i
+```
+2. window 慢指针不用走到尾：  
+          - 主要适用与 remove duplicate 一类问题.  
+```python
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        n = len(nums)
+        lo = 0
+        for hi in range(n):
+            if (nums[hi] != val):
+                nums[lo] = nums[hi]
+                lo += 1
+        return lo
 ```
 
 ## Subarray ##
