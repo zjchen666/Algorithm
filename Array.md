@@ -69,7 +69,28 @@ Array
                 A[index] = A[i]
                 index += 1
         return index
-        
+ ```       
+ ### 主要题型 ###
+ * partition array - move 比k小的到左边，大的到右边
+ * two element运算， 求和，差，积，etc。 先sort，然后往中间移动。
+ * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
+ * remove duplicate。同向双指针，慢的存留下的元素最后位置的index， 快的往前找不重复的元素。
+ * intersection of two arrays. 先sort然后同向移动，找出相同的值。
+ * subarray问题，一般都是要先求presum。
+ * window 问题， 前向指针。
+ 
+ ### 解法 ###
+ * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
+ * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
+ 
+      + 两种类型: __快慢指针__ 和 __窗口问题__  
+      + 窗口问题适用题目：  
+          -  主要是用来优化两层for循环。  
+          -  外层仍然需要从头到尾遍历。  
+          -  内层不需要回退！  
+      + [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
+ 
+```python
     # window 类 forward pointers O(n^2):
      j = 0
      for i in range(n):
@@ -81,19 +102,6 @@ Array
                  break
          update i
 ```
- ### 主要题型 ###
- * partition array - move 比k小的到左边，大的到右边
- * two element运算， 求和，差，积，etc。 先sort，然后往中间移动。
- * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
- * remove duplicate。同向双指针，慢的存留下的元素最后位置的index， 快的往前找不重复的元素。
- * intersection of two arrays. 先sort然后同向移动，找出相同的值。
- * subarray问题，一般都是要先求presum。
- * window 问题， 前向指针。
-    + [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)
- 
- ### 解法 ###
- * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
- * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
 
 ## Subarray ##
 ### 主要算法 ###
