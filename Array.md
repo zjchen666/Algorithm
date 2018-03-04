@@ -72,7 +72,7 @@ Array
  
       + 两种类型: __快慢指针__ 和 __窗口问题__  
       + 窗口问题 分两种：  
-      1. window 从头到尾：
+__window 从头到尾__ ：
 - 主要是用来优化两层for循环。 
 - 外层仍然需要从头到尾遍历。  
 - 内层不需要回退！
@@ -91,8 +91,8 @@ Array
          update i
 ```
 
-2. window 慢指针不用走到尾：  
-          - 主要适用与 remove duplicate 一类问题.  
+__window 慢指针不用走到尾__ ：  
+- 主要适用与 remove duplicate 一类问题.  
 ```python
     def removeElement(self, nums, val):
         """
