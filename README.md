@@ -4,7 +4,7 @@
 * [Array](/Array.md)
 * [Linked List](/link_list.md)
 * [Graph](/graph.md)
-* [Tree](/tree.md)
+* [Tree](/binary_tree.md)
 * [String](/string.md)
 * [Math](/math.md)
 
