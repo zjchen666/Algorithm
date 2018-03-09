@@ -10,8 +10,15 @@
       * Divid Conquer. 自下而上。90%的二叉树问题都可以用 Divide Conquer。
 3. 理解 DFS, traverse and divide-conquer。 traverse and divide-conquer 都属于 DFS。
       traverse 传参数， divide-conquer 返回值。
-4. 二叉树的递归与非递归遍历，preorder， inorder， postorder。
-5. Convert preorder/inorder/postorder into binary tree. -> Divid conquer. 注意如何找root，如何slice左右子树。
+      
+## 主要考点：
+* [二叉树的递归与非递归遍历](/遍历)
+* Convert preorder/inorder/postorder into binary tree. -> Traverse. 注意如何找root，如何slice左右子树。
+* 两个Tree 比较问题
+* Sub Tree 问题
+* Path Sum 问题
+* 动态规划相关
+* 数据结构
     
 ## 遍历 ##
 ## Pre-order Recursion and Non-recursion
