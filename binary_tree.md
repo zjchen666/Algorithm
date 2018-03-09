@@ -14,7 +14,7 @@
 ## 主要考点：
 * [二叉树的递归与非递归遍历](#遍历)
 * Convert preorder/inorder/postorder into binary tree. -> Traverse. 注意如何找root，如何slice左右子树。
-* 两个Tree 比较问题
+* 两个Tree 比较问题 - divide conquer
 * Sub Tree 问题
 * Path Sum 问题
 * 动态规划相关
