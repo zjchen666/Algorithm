@@ -12,7 +12,7 @@
       traverse 传参数， divide-conquer 返回值。
       
 ## 主要考点：
-* [二叉树的递归与非递归遍历](/遍历)
+* [二叉树的递归与非递归遍历](#遍历)
 * Convert preorder/inorder/postorder into binary tree. -> Traverse. 注意如何找root，如何slice左右子树。
 * 两个Tree 比较问题
 * Sub Tree 问题
