@@ -2,6 +2,7 @@
 
 1. 注意判断需不需要使用分层遍历。
 2. __能用BFS一定不用DFS__，non-recursion and easy understanding!
+3. clone 类问题要结合hashtable or hashset
 
 ### 模板 ###
 ```python
