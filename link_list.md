@@ -10,6 +10,7 @@
  * 利用快慢指针解决circle的问题及二分的问题。
  * reverse相关操作可以利用stack，主要要存link lisk元素的value，实在不行也可以直接存元素。
  * 直接交换value也可以考虑，但要确定是否允许。
+ * 遍历链表时， 什么时候 判断 node == None 什么时候判断 node->next == None? 
  
 ### Sort ###
     + 要求 O(nlgn)的时间复杂度，使用mergeSort，快慢指针找到终点。
