@@ -21,6 +21,30 @@
 * 数据结构
     
 ## 遍历 ##
+## non-recursion templete ##
+```python
+    def traverse(root):
+        stack = []
+        result = []
+        node = root
+        while node:
+            stack.append(node)
+            # result.append() preorder
+            node = node.left
+            
+        while stack:
+            node = stack.pop()
+            # result.append() inorder
+            if node.right:
+                node = node.right
+                while node:
+                    stack.append(node)
+                    # result.append preorder
+                    node = node.left
+                    
+        return result
+```
+
 ## Pre-order Recursion and Non-recursion
 ```python
     def preorderNonRecur(self, root):
@@ -97,7 +121,7 @@
         self.traverse(root.right)
 ```
 
-## Post-Order Recursion ##
+## Post-Order Recursion and non-recursion ##
 ```python
     def postorderRecur(self, root):
         # write your code here
@@ -113,5 +137,25 @@
         self.traverse(root.left)
         self.traverse(root.right)
         self.postorder.append(root.val)
+        
+    def post_order(root):
+        stack = []
+        result = []
+        node = root
+        while node:
+            stack.append(node)
+            node = node.left
+            
+        while stack:
+            if stack[-1].right and node != stack[-1].right:
+                node = stack[-1].right
+                while node:
+                    stack.append(node)
+                    node = node.left
+            else:
+                node = stack.pop()
+                results.append(node.val)
+                    
+        return result
+            
 ```
-
