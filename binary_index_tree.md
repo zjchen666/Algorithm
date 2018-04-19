@@ -1,8 +1,10 @@
- ## Binary Index Tree ##
+ ## Binary Index Tree ## 
+__用法__ :  O(log(n)) 的时间内求一段区间内的和.
 
-__用法__ :  O(log(n)) 的时间内求一段区间内的和 
-__主要操作__ ：update 某一点， 区间求和 
+__主要操作__ ：update 某一点， 区间求和 .
+
 __离散化__ ： discretization. 用于降低区间范围 
+
 
 ```python
         def descretization(A):
