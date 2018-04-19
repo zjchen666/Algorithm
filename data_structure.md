@@ -8,15 +8,11 @@
   
 ```python
    stack = []
-   for c in list:
-       if condition 1:
-          ...
-          stack.pop()/stack.push()
-       elif condition 2:
-          ...
-          stack.pop()/stack.push()
-       else:
-          ...
+   for index, num in enumerate(list):
+       while s and condition 1:
+          stack.pop()
+          // calculate
+       stack.append()
    return
 ```
    
