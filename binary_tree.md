@@ -47,23 +47,21 @@
 
 ## Pre-order Recursion and Non-recursion
 ```python
-    def preorderNonRecur(self, root):
-        # write your code here
+    def preorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
         stack = [root]
-        preorder = []
-
-        if root is None:
-            return preorder
-
+        result = []
+        
         while stack:
             node = stack.pop()
-            preorder.append(node.val)
-            if node.right is not None:
-                stack.append(node.right)
-            if node.left is not None:
-                stack.append(node.left)
-
-        return preorder
+            if node:
+                result.append(node.val)
+                stack += [node.right, node.left]
+                    
+        return result
 ```
 
 ```python 
