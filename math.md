@@ -10,3 +10,17 @@
 
 * 求质数
 * 分解质因数
+
+## 欧几里得 GCD 算法 ##
+
+```python
+def gcd(x, y):
+   a, b = x, y if x > y else y, x
+   a = a % b
+   if a == 0:
+       return b
+   else:
+       return gcd(b, a)
+```
+
+## 求质数 ##
