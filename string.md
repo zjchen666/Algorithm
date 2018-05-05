@@ -20,6 +20,7 @@ int()
 * two pointers
 * hash table(可以用size 为 128 byte的数组替换)
 * DP
+* stack相关问题
 
 ### string DP 问题 ###
 思路：使用二维矩阵, 填充true/false 还是计算的结果length？数组的size是n 还是n+1？
