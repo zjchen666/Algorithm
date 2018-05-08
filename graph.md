@@ -40,8 +40,9 @@
 #### 找寻联通分量
  * Union Find 
      - 适合只提供边的情况。和定点的值在范围 0 ～ N的情况。
-     - 节点的顺序没有要求。
-     - 联通状况可以用数组或者Hash Table存储。
+     - 节点的顺序没有要求。 
+     - 联通状况可以用数组或者Hash Table存储。
+     
 ```python
         def find(p, id):
             while id[p] != p:
