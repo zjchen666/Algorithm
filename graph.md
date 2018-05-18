@@ -31,11 +31,13 @@
  * BFS
 ### 检测环
  * DFS
+ * BFS
 
 ### 连通性问题
 #### 判断两点是否联通
  * Union Find
  * DFS
+ * BFS
  
 #### 找寻联通分量
  * Union Find 
@@ -59,8 +61,9 @@
 ```
  * DFS 
     - 需要对图进行预处理， 适合提供完整图的情况。
-    - 不适合二维矩阵的情况
-    
+    - 不适合二维矩阵的情况。
+    - 也要使用 ID 作为联通分量的标识。
+     
 ```python
         for w in nodes:
             if marked[w] != True:
