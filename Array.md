@@ -58,7 +58,7 @@ Array
          return
  ```       
  ### 主要题型 ###
- * partition array - move 比k小的到左边，大的到右边
+ * partition array - move 比k小的到左边，大的到右边. pivot 一定要用value 而不是nums[index], 因为 nums[pivot]可能在partition的过程中被修改。
  * two element运算， 求和，差，积，etc。 先sort，然后往中间移动。
  * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
  * remove duplicate。同向双指针，慢的存留下的元素最后位置的index， 快的往前找不重复的元素。
