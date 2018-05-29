@@ -7,5 +7,6 @@
 * [Tree](/binary_tree.md)
 * [String](/string.md)
 * [Math](/math.md)
+* [Stack](/stack.md)
 
 
