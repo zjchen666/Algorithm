@@ -1,7 +1,31 @@
-## 全排列算法 ##
-* 交换法
-* 字典序法
-* 全排列去重
+## Subset ##
+   1. 选或不选的 DFS方法
+   2. 和 combination类似的扫描DFS的方法。
+   3. bit mask的方法。
+   4. 如何去重：
+       a. 先排序。
+       b. 如果当前值和前一个相同， 跳过去。
+       
+```python
+   def dfs(nums, index, subset, result):
+       result.append(subset)
+       
+       for i in range(index, n):
+           subset.append(nums[i])
+           dfs(nums, i + 1, subset, result)
+           subset.pop()
+       return
+``` 
+## Combination ##
+1. 和subset 类似的通用解法。 区别 不加 一。
+2. DP 解法。
+3. 如何去重， 同subset
+   
+## Permutation ##
+* 交换法 - 适用于无重复的全排列， 去重比较麻烦
+* 字典序法 - 用于求next permutation。
+* 类似于subset的通用解法，需要做visited 标记。
+* 全排列去重， 如果前一个相同的数未做标记，就跳过。
 * 求第K个排列
 
 ### 交换法 ###
