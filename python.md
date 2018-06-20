@@ -1,4 +1,5 @@
 
+
 * [hash table and hash set](#hash)
 * [array](#array) 
 * [string](#string)
@@ -40,6 +41,10 @@ set(['a', 'c', 'b', ',']
 * dict.keys() 返回一个包含字典中键的列表
 * dict.values() 返回一个包含字典中所有值的列表
 * del dict[key] 删除一个元素。
+
+setdefault() 和 get() 区别, 
+- setdefault() 如果键不存在于字典中，将会添加键并将值设为默认值。
+- get() 如果键不存在字典中 返回一个指定的默认值。
 
 ### array
 - 二维数组预定义：
