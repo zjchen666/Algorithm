@@ -2,8 +2,9 @@
 ### python PQ 库函数
 ```python
 import heapq
-
-# 把 list heap 化
+创建一个空heap
+heap = []
+# 把 list heap 化
 heapq.heapify(list)
 
 heapq.heappush(heap, item)
