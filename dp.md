@@ -67,7 +67,7 @@
 #### 区间型动态规划
    - f 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
    - 按照对角线初始化以及搜索。  
-   
+   - O(n^3) burst bullon
 ```python
         n = len(s)
         f = [[False for i in range(n)] for j in range(n)]
