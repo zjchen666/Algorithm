@@ -1,12 +1,10 @@
-
+ 
 ## C++ STL
-
-
-
 ### vector:
 ```cpp
-   vector<int>
-
+   vector<int> nums
+   iterator nums.begin(), nums.end()
+   
    vector<string>
 
    vector<double>
@@ -17,7 +15,11 @@
 
    pop()
 ```
-
+### list:
+### stack:
+### deque:
+### priority_queue:
+### unordered_map
 ### queue:
 定义queue对象的示例代码如下：
 
