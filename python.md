@@ -85,7 +85,9 @@ matrix = [[0 for i in range(3)] for i in range(3)]
 ### string
   可以使用 sorted(str) 为字符串排序。 不能用str.sort()， 因为字符串是immutable。 sorted()会create a new character list.
   use "".join(sorted(str)) to get a sorted new string.
-
+  
+  去除某个字符： lstrip(), rstrip(), strip()
+  
 ### lib
 * binary search
 ```python
