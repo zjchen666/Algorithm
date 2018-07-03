@@ -1,4 +1,4 @@
-
+##
 ## 字符串
 ### 基础 知识点 ###
  * ASCII 码
@@ -20,6 +20,34 @@ int()
 * two pointers
 * hash table(可以用size 为 128 byte的数组替换)
 * DP
+* sliding window + hash
+```python
+    def lengthOfLongestSubstringTwoDistinct(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        n = len(s)
+        result = 0
+        hash = {}
+
+        j = 0
+        for i in xrange(n):
+            while j < n:
+                if s[j] in hash or len(hash) <= 1:
+                    hash[s[j]] = hash.get(s[j], 0) + 1
+                    j += 1
+                    result = max(result, j-i)
+                    continue
+                else:
+                    break
+            
+            hash[s[i]] = hash[s[i]] - 1
+            if hash[s[i]] == 0:
+                del hash[s[i]]
+                
+        return result
+```
 * stack相关问题
 
 ### string DP 问题 ###
