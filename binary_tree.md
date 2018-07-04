@@ -14,12 +14,70 @@
 ## 主要考点：
 * [二叉树的递归与非递归遍历](#遍历)
 * Convert preorder/inorder/postorder into binary tree. -> Traverse. 注意如何找root，如何slice左右子树。
-* 两个Tree 比较问题 - divide conquer
+* 两个Tree 比较问题 - 考虑每个树的subtree该如何比较， divide conquer
 * Sub Tree 问题
 * Path Sum 问题
 * 动态规划相关
 * 数据结构
-    
+* Tree 的 serialize 和 deserialize, 要注意负值 “-1” size是2，每个节点要使用 “，”隔开， deserialize的时候先转换成数组。
+## serialize 和 deserialize
+```python
+       def serialize(self, root):
+        """Encodes a tree to a single string.
+        
+        :type root: TreeNode
+        :rtype: str
+        """
+        if not root:
+            return None
+        
+        queue = [root]
+        result = []
+        
+        while queue:
+            node = queue.pop()
+            if node:
+                result.append(str(node.val))
+                queue.insert(0, node.left)
+                queue.insert(0, node.right)
+            else:
+                result.append("#")
+        while result[-1] == "#":
+            result.pop()
+        
+        return ",".join(result)
+        
+
+    def deserialize(self, data):
+        """Decodes your encoded data to tree.
+        :type data: str
+        :rtype: TreeNode
+        """
+        if not data:
+            return None
+        
+        array = data.split(",")
+        root = TreeNode(array[0])
+        queue = [root]
+        index = 0
+        left = True
+        
+        for val in array[1:]:
+            if val != "#":
+                if left:
+                    #print val
+                    queue[index].left = TreeNode(int(val))
+                    queue.append(queue[index].left)
+                else:
+                    queue[index].right = TreeNode(int(val))
+                    queue.append(queue[index].right)
+                    
+            if not left:
+                index += 1
+            left = not left
+
+        return root
+```
 ## 遍历 ##
 ## non-recursion templete ##
 ```python
