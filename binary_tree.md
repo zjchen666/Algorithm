@@ -19,8 +19,10 @@
 * Path Sum 问题
 * 动态规划相关
 * 数据结构
-* Tree 的 serialize 和 deserialize, 要注意负值 “-1” size是2，每个节点要使用 “，”隔开， deserialize的时候先转换成数组。
-## serialize 和 deserialize
+* [Tree 的 serialize 和 deserialize](#serialize/deserialize)
+  要注意负值 “-1” size是2，每个节点要使用 “，”隔开， deserialize的时候先转换成数组。
+  
+## serialize/deserialize ##
 ```python
        def serialize(self, root):
         """Encodes a tree to a single string.
