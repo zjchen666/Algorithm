@@ -136,9 +136,9 @@ class Solution:
             return nums[k]
 ```
 ## MergeSort ##
-- 可用于解决，数组的recurence问题
-   https://leetcode.com/problems/reverse-pairs/description/
-   https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/
+- 可用于解决，数组的一类需要排序后 O(N)的recurence问题：  
+   https://leetcode.com/problems/reverse-pairs/description/  
+   https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/  
    https://leetcode.com/problems/count-of-range-sum/description/
    
 ```python
