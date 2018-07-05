@@ -136,6 +136,11 @@ class Solution:
             return nums[k]
 ```
 ## MergeSort ##
+- 可用于解决，数组的recurence问题
+   https://leetcode.com/problems/reverse-pairs/description/
+   https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/
+   https://leetcode.com/problems/count-of-range-sum/description/
+   
 ```python
             def mergeSort(self, A, start, end, aux):
 		if start == end:
