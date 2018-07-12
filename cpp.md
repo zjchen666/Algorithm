@@ -1,4 +1,3 @@
- 
 ## C++ STL
 ### vector:
 ```cpp
@@ -19,7 +18,14 @@
 ### stack:
 ### deque:
 ### priority_queue:
-### unordered_map
+### unordered_map:
+   unordered_map<char, int> map;
+   if (map.find(key) != map.end())
+### unordered_set:   
+   unordered_set<char> set;
+   if (set.find(key) != set.end())
+   set.insert(val)
+   set.delete(val)
 ### queue:
 ### string:
    string s, s.push_back(), s.size(), s.pop()
