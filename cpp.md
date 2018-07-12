@@ -19,16 +19,22 @@
 ### deque:
 ### priority_queue:
 ### unordered_map:
+```cpp
    unordered_map<char, int> map;
    if (map.find(key) != map.end())
-### unordered_set:   
+```
+### unordered_set:
+```cpp
    unordered_set<char> set;
    if (set.find(key) != set.end())
    set.insert(val)
    set.delete(val)
+```
 ### queue:
 ### string:
+```cpp
    string s, s.push_back(), s.size(), s.pop()
+```
    
 定义queue对象的示例代码如下：
 
