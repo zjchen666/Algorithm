@@ -21,6 +21,9 @@
 ### priority_queue:
 ### unordered_map
 ### queue:
+### string:
+   string s, s.push_back(), s.size(), s.pop()
+   
 定义queue对象的示例代码如下：
 
 queue<int> q1;
