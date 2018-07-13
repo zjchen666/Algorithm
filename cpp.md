@@ -73,6 +73,7 @@ int main () {
 ### string:
 ```cpp
    string s, s.push_back(), s.size(), s.pop()
+   isalnum(c), tolower(c)
 ```
    
 定义queue对象的示例代码如下：
