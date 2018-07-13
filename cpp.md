@@ -1,6 +1,7 @@
 
 ## C++ STL
 [String](#string)
+[Stack](#stack)
 
 ### auto:
 ### vector:
@@ -20,6 +21,12 @@
 ```
 ### list:
 ### stack:
+```cpp
+   stack int s;
+   s.push(1)
+   s.pop()
+   
+```
 ### deque:
 ### sort:
 ```cpp
