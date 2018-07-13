@@ -1,5 +1,7 @@
 
 ## C++ STL
+[String](#string)
+
 ### auto:
 ### vector:
 ```cpp
