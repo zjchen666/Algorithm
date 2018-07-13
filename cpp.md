@@ -25,8 +25,8 @@
 ```cpp
    stack int s;
    s.push(1)
-   s.pop()
-   
+   s.pop() - Doesn't return any value. top first then pop.
+   s.top()
 ```
 ### deque:
 ### sort:
