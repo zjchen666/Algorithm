@@ -1,6 +1,7 @@
 
 ## C++ STL
-[String](#string)
+[String](#string) 
+
 [Stack](#stack)
 
 ### auto:
