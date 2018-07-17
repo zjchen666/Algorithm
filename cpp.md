@@ -3,6 +3,7 @@
 [String](#string) 
 
 [Stack](#stack)
+[pair](#pair)
 
 ### auto:
 ### vector:
@@ -19,6 +20,11 @@
    push_back()
 
    pop()
+```
+### pair:
+```cpp
+    make_pair((x, y))
+    a.first, a.second
 ```
 ### list:
 ### stack:
