@@ -88,6 +88,7 @@ int main () {
 ```cpp
    string s, s.push_back(), s.size(), s.pop()
    isalnum(c), tolower(c)
+   str.substr(start_pos, end_pos) - python str[start:end]
 ```
    
 定义queue对象的示例代码如下：
