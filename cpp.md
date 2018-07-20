@@ -4,9 +4,13 @@
    int *p[3] - 指针数组， 是数组  
    (int**) p 不能和 array 互相赋值   
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
-   
-swap 函数：
+
+### 常用函数
+- swap 函数：  
 swap（x, y）
+- sort()   
+sort(a.begin(), a.end());
+    
 ## C++ STL
 [String](#string) 
 
