@@ -5,7 +5,8 @@
    (int**) p 不能和 array 互相赋值   
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
    
-
+swap 函数：
+swap（x, y）
 ## C++ STL
 [String](#string) 
 
