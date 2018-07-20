@@ -96,6 +96,13 @@ int main () {
    set.delete(val)
 ```
 ### queue:
+```cpp
+    queue <int> q
+    q.pop()
+    q.push()
+    q.back()
+    q.front()
+```
 ### string:
 ```cpp
    string s, s.push_back(), s.size(), s.pop()
