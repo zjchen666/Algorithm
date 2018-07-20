@@ -25,8 +25,8 @@
    size()
 
    push_back()
-
-   pop()
+   back()
+   pop_back() - doesn't return any value
 ```
 ### pair:
 ```cpp
