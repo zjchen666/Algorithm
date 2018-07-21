@@ -101,7 +101,7 @@
         if (满足条件):
             return True
            
-        if memo[num]:
+        if memo[nums]:
             return memo
 
         for i in range(len(nums)):
@@ -110,6 +110,8 @@
                 return True
         return False
 ```
+https://leetcode.com/problems/can-i-win/description/
+https://leetcode.com/problems/flip-game-ii/description/
     
     
 #### 双序列型动态规划
