@@ -91,6 +91,27 @@
 
         return f[0][-1]
 ```
+
+#### 博弈型动态规划
+    要理解 所有子问题必胜则必拜， 一个子问题必败则必胜。
+    
+    1. DFS + memo 解法模板，
+```python
+    def dfs(nums, memo):
+        if (满足条件):
+            return True
+           
+        if memo[num]:
+            return memo
+
+        for i in range(len(nums)):
+            if False == dfs(sub_nums, memo):
+                memo[nums[i]] = True 
+                return True
+        return False
+```
+    
+    
 #### 双序列型动态规划
    - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。
    
