@@ -108,9 +108,10 @@
             if False == dfs(sub_nums, memo):
                 memo[nums[i]] = True 
                 return True
+        memo[nums[i]] = False 
         return False
 ```
-https://leetcode.com/problems/can-i-win/description/
+https://leetcode.com/problems/can-i-win/description/   
 https://leetcode.com/problems/flip-game-ii/description/
     
     
