@@ -38,7 +38,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
         j = 0
         for i in xrange(n):
             while j < n:
-                if s[j] in hash or len(hash) <= 1:
+                if s[j] in hash or len(hash) <= k - 1:
                     hash[s[j]] = hash.get(s[j], 0) + 1
                     j += 1
                     result = max(result, j-i)
