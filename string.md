@@ -21,9 +21,12 @@ Return a string of one character whose ASCII code is the integer i. For example,
 * two pointers
 * hash table(可以用size 为 128 byte的数组替换)
 * DP
-* sliding window + hash
+
+## LongestSubstring with k Distinct:
+* 解法 sliding window + hash
+
 ```python
-    def lengthOfLongestSubstringTwoDistinct(self, s):
+    def lengthOfLongestSubstringKDistinct(self, s):
         """
         :type s: str
         :rtype: int
@@ -49,6 +52,10 @@ Return a string of one character whose ASCII code is the integer i. For example,
                 
         return result
 ```
+https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/
+https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/
+https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+
 * stack相关问题
 
 ### string DP 问题 ###
