@@ -112,15 +112,18 @@
         :type root: TreeNode
         :rtype: List[int]
         """
-        stack = [root]
+        stack = []
+        node = root
         result = []
         
-        while stack:
-            node = stack.pop()
+        while stack or node:
             if node:
-                result.append(node.val)
-                stack += [node.right, node.left]
-                    
+                result.append(node.val) -- output
+                stack.append(node)
+                node = node.left
+            else:
+                node = stack.pop()
+                node = node.right
         return result
 ```
 
@@ -160,7 +163,7 @@
                 node = node.left
             else:
                 node = stack.pop()     
-                result.append(node.val)
+                result.append(node.val) -- output
                 node = node.right
         return result
 ```
