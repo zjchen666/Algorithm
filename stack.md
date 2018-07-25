@@ -3,6 +3,8 @@
 如果遇到的问题，和前后元素之间的大小关系有关系的话，我们可以试图用单调栈来解决。
 入栈的元素一般是index,O(n)线性时间的复杂度。
 
+[Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/description/)  
+[Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/description/)
 
 ### Flatten 问题
 解法，
