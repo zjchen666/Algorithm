@@ -22,7 +22,7 @@ sort(a.begin(), a.end());
 ```cpp
    vector<int> nums
    iterator nums.begin(), nums.end()
-   
+   vector<int> map(26,0) -- Init a vector size 26 value 0
    vector<string>
 
    vector<double>
