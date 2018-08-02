@@ -17,6 +17,7 @@ sort(a.begin(), a.end());
 [Stack](#stack)
 [pair](#pair)
 
+iterator is a pointer.
 ### auto:
 ### vector:
 ```cpp
