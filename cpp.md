@@ -12,10 +12,18 @@ swap（x, y）
 sort(a.begin(), a.end());
     
 ## C++ STL
-[String](#string) 
-
-[Stack](#stack)
+[String](#string)   
+[Stack](#stack)  
 [pair](#pair)
+
+| vector        | deque         | stack | queue      | priority_queue |
+| ------------- |:-------------:| -----:| -----------|----------------|       
+| push_back     | push_back     | push  |  push      | push           |
+| pop_back      | pop_back      | pop   |  pop       | pop            |
+| N/A           | push_front    | N/A   |  N/A       | N/A            |
+| N/A           | pop_front     | N/A   |  N/A       | N/A            |
+| front         | front         | top   |  front     | top            |
+| back          | back          | N/A   |  back      | N/A            |
 
 iterator is a pointer.
 ### auto:
