@@ -24,6 +24,8 @@ sort(a.begin(), a.end());
 | N/A           | pop_front     | N/A   |  N/A       | N/A            |
 | front         | front         | top   |  front     | top            |
 | back          | back          | N/A   |  back      | N/A            |
+| size          | size          | size  |  size      | size           |
+| empty         | empty         | empty |  empty     | empty          |
 
 iterator is a pointer.
 ### auto:
