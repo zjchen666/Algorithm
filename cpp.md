@@ -118,7 +118,8 @@ int main () {
 ```cpp
    string s, s.push_back(), s.size(), s.pop()
    isalnum(c), tolower(c)
-   str.substr(start_pos, end_pos) - python str[start:end]
+   str.substr(start_pos, len) - python str[start:end]
+   s + "sdsdsa" is supported by CPP
 ```
    
 定义queue对象的示例代码如下：
