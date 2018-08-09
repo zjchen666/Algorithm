@@ -16,16 +16,16 @@ sort(a.begin(), a.end());
 [Stack](#stack)  
 [pair](#pair)
 
-| vector        | deque         | stack | queue      | priority_queue |
-| ------------- |:-------------:| -----:| -----------|----------------|       
-| push_back     | push_back     | push  |  push      | push           |
-| pop_back      | pop_back      | pop   |  pop       | pop            |
-| N/A           | push_front    | N/A   |  N/A       | N/A            |
-| N/A           | pop_front     | N/A   |  N/A       | N/A            |
-| front         | front         | top   |  front     | top            |
-| back          | back          | N/A   |  back      | N/A            |
-| size          | size          | size  |  size      | size           |
-| empty         | empty         | empty |  empty     | empty          |
+| vector        | string      | deque         | stack | queue      | priority_queue |
+| ------------- |-------------|:-------------:| -----:| -----------|----------------|
+| push_back     | push_back   | push_back     | push  |  push      | push           | 
+| pop_back      | pop_back    | pop_back      | pop   |  pop       | pop            |
+| N/A           | N/A         | push_front    | N/A   |  N/A       | N/A            |
+| N/A           | N/A         | pop_front     | N/A   |  N/A       | N/A            |
+| front         | front       | front         | top   |  front     | top            |
+| back          | back        | back          | N/A   |  back      | N/A            |
+| size          | size        | size          | size  |  size      | size           |
+| empty         | empty       | empty         | empty |  empty     | empty          |
 
 iterator is a pointer.
 ### auto:
