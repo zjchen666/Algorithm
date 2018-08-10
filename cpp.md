@@ -10,7 +10,13 @@
 swap（x, y）
 - sort()   
 sort(a.begin(), a.end());
-    
+### iterator
+```cpp
+        for (string::reverse_iterator it = s.rbegin(); it < s.rend(); it++)
+        {
+            res.push_back(*it);
+        }
+ ```
 ## C++ STL
 [String](#string)   
 [Stack](#stack)  
