@@ -18,6 +18,7 @@ sort(a.begin(), a.end());
         }
         reverse() 区间 [first,last)
  ```
+ iterator is a pointer.
 ## C++ STL
 [String](#string)   
 [Stack](#stack)  
@@ -34,7 +35,7 @@ sort(a.begin(), a.end());
 | size          | size        | size          | size  |  size      | size           |               |               |
 | empty         | empty       | empty         | empty |  empty     | empty          |               |               |
 | find -> end() | find -> npos|               |       |            |                |               |               |
-iterator is a pointer.
+
 ### auto:
 ### vector:
 ```cpp
