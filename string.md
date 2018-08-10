@@ -21,6 +21,23 @@ Return a string of one character whose ASCII code is the integer i. For example,
 * two pointers
 * hash table(可以用size 为 128 byte的数组替换)
 * DP
+* 子串处理
+
+## 子串处理
+```cpp
+        i = 0, j = 0;
+        while (j < length){
+            j++;
+            # end or condition
+            if (str[j] == ' ' || j == str.size())
+            {
+                # do something
+                reverse(str.begin() + i, str.begin() + j);
+                i = j + 1;
+            }
+        }
+```
+https://leetcode.com/problems/reverse-words-in-a-string-ii/description/
 
 ## LongestSubstring with k Distinct:
 * 解法 sliding window + hash
