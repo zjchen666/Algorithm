@@ -6,10 +6,13 @@
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
 
 ### 常用函数
-- swap 函数：  
+
+## swap 函数：  
 swap（x, y）
-- sort()   
+### sort()   
 sort(a.begin(), a.end());
+sort(data.begin(), data.end(), greater<int>());
+   
 ### comparator
 ```cpp
 struct compare {
