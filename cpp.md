@@ -16,6 +16,7 @@ sort(a.begin(), a.end());
         {
             res.push_back(*it);
         }
+        reverse() 区间 [first,last)
  ```
 ## C++ STL
 [String](#string)   
