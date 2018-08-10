@@ -22,7 +22,12 @@ Return a string of one character whose ASCII code is the integer i. For example,
 * hash table(可以用size 为 128 byte的数组替换)
 * DP
 * 子串处理
-
+## 两个字符串比较
+   solutions: 
+     1. 填充短的。
+     2. 按min(len1, len2)先处理。
+     3. 按max(len1, len2)先处理。
+   
 ## 子串处理
 ```cpp
         i = 0, j = 0;
