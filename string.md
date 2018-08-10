@@ -27,6 +27,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
      1. 填充短的。
      2. 按min(len1, len2)先处理。
      3. 按max(len1, len2)先处理。
+   https://leetcode.com/problems/compare-version-numbers/description/
    
 ## 子串处理
 ```cpp
