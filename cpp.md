@@ -10,6 +10,14 @@
 swap（x, y）
 - sort()   
 sort(a.begin(), a.end());
+### comparator
+```cpp
+struct compare {
+    bool operator()(const ListNode* l, const ListNode* r) {
+        return l->val > r->val;
+    }
+};
+```
 ### iterator
 ```cpp
         for (string::reverse_iterator it = s.rbegin(); it < s.rend(); it++)
