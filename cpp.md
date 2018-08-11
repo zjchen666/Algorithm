@@ -6,8 +6,12 @@
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
 
 ### 常用函数
-
-## swap 函数：  
+## initialization
+```cpp
+    unordfered_map<int, int> map = {{1, 2}, {3, 4}, {5, 6}};
+    vector<pair<int, int>> pair = {{1, 2}, {1, 2}}
+```
+## swap：  
 swap（x, y）
 ### sort()   
 sort(a.begin(), a.end());
@@ -22,6 +26,7 @@ struct compare {
 };
 ```
 ### iterator
+iterator is a pointer.
 ```cpp
         for (string::reverse_iterator it = s.rbegin(); it < s.rend(); it++)
         {
@@ -29,7 +34,7 @@ struct compare {
         }
         reverse() 区间 [first,last)
  ```
- iterator is a pointer.
+
 ## C++ STL
 [String](#string)   
 [Stack](#stack)  
