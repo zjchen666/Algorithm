@@ -6,10 +6,17 @@
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
 
 ### 常用函数
-## initialization
+## Initialization
 ```cpp
+    /* hashmap */
     unordfered_map<int, int> map = {{1, 2}, {3, 4}, {5, 6}};
+    
+    /* pair */
     vector<pair<int, int>> pair = {{1, 2}, {1, 2}}
+    
+    /*2D vector*/
+    int m = 2, n = 5;
+    vector<vector<int>> vec(m, vector<int> (n, 2));
 ```
 ## swap：  
 swap（x, y）
