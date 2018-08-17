@@ -20,6 +20,7 @@
 ```
 ## swap：  
 swap（x, y）
+
 ### sort()   
 sort(a.begin(), a.end());
 sort(data.begin(), data.end(), greater<int>());
@@ -125,6 +126,10 @@ int main () {
 }
 ```
 ### priority_queue:
+   _define_
+   Min Heap: priority_queue<int, vector<int>, greater<int>> min;  
+   Max Heap: priority_queue<int> max;
+   
 ### unordered_map:
 ```cpp
    unordered_map<char, int> map;
