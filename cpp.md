@@ -46,7 +46,8 @@ iterator is a pointer.
 ## C++ STL
 [String](#string)   
 [Stack](#stack)  
-[pair](#pair)
+[pair](#pair)  
+[priority_queue](#priority_queue)
 
 | vector        | string      | deque         | stack | queue      | priority_queue | unordered_set | unordered_map |
 | ------------- |-------------|:-------------:| -----:| -----------|----------------|---------------|---------------|
@@ -126,7 +127,7 @@ int main () {
 }
 ```
 ### priority_queue:
-   _define_
+#### define
    Min Heap: priority_queue<int, vector<int>, greater<int>> min;  
    Max Heap: priority_queue<int> max;
    
