@@ -22,7 +22,7 @@
 swap（x, y）
 
 ### sort()   
-sort(a.begin(), a.end());
+sort(a.begin(), a.end());  
 sort(data.begin(), data.end(), greater<int>());
    
 ### comparator
@@ -128,9 +128,9 @@ int main () {
 ```
 ### priority_queue:
 #### define
-   Min Heap: priority_queue<int, vector<int>, greater<int>> min;  
-   Max Heap: priority_queue<int> max;
-   
+   Min Heap: priority_queue<int, vector<int>, greater<int>> min_heap;  
+   Max Heap: priority_queue<int> max_heap;
+   Heap with self defined comparator: priority_queue<int, vector<int>, cmp> heap;
 ### unordered_map:
 ```cpp
    unordered_map<char, int> map;
