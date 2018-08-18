@@ -1,12 +1,26 @@
-## Pointer and array
-### 数组指针和指针数组
-   int array[3][3]
-   int *p[3] - 指针数组， 是数组  
-   (int**) p 不能和 array 互相赋值   
-   int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
+## [C++ STL](#stl)
+[Misc](#misc)   
+[String](#string)   
+[Stack](#stack)  
+[pair](#pair)  
+[priority_queue](#priority_queue)
+## Class
 
-### 常用函数
-## Initialization
+## stl
+| vector        | string      | deque         | stack | queue      | priority_queue | unordered_set | unordered_map |
+| ------------- |-------------|:-------------:| -----:| -----------|----------------|---------------|---------------|
+| push_back     | push_back   | push_back     | push  |  push      | push           | insert        | N/A           |
+| pop_back      | pop_back    | pop_back      | pop   |  pop       | pop            | erase         | erase         |
+| N/A           | N/A         | push_front    | N/A   |  N/A       | N/A            |               |               |
+| N/A           | N/A         | pop_front     | N/A   |  N/A       | N/A            |               |               |
+| front         | front       | front         | top   |  front     | top            |               |               |
+| back          | back        | back          | N/A   |  back      | N/A            |               |               |
+| size          | size        | size          | size  |  size      | size           |               |               |
+| empty         | empty       | empty         | empty |  empty     | empty          |               |               |
+| find -> end() | find -> npos|               |       |            |                |               |               |
+
+### misc
+### Initialization
 ```cpp
     /* hashmap */
     unordfered_map<int, int> map = {{1, 2}, {3, 4}, {5, 6}};
@@ -18,7 +32,7 @@
     int m = 2, n = 5;
     vector<vector<int>> vec(m, vector<int> (n, 2));
 ```
-## swap：  
+### swap：  
 swap（x, y）
 
 ### sort()   
@@ -42,25 +56,6 @@ iterator is a pointer.
         }
         reverse() 区间 [first,last)
  ```
-
-## C++ STL
-[String](#string)   
-[Stack](#stack)  
-[pair](#pair)  
-[priority_queue](#priority_queue)
-
-| vector        | string      | deque         | stack | queue      | priority_queue | unordered_set | unordered_map |
-| ------------- |-------------|:-------------:| -----:| -----------|----------------|---------------|---------------|
-| push_back     | push_back   | push_back     | push  |  push      | push           | insert        | N/A           |
-| pop_back      | pop_back    | pop_back      | pop   |  pop       | pop            | erase         | erase         |
-| N/A           | N/A         | push_front    | N/A   |  N/A       | N/A            |               |               |
-| N/A           | N/A         | pop_front     | N/A   |  N/A       | N/A            |               |               |
-| front         | front       | front         | top   |  front     | top            |               |               |
-| back          | back        | back          | N/A   |  back      | N/A            |               |               |
-| size          | size        | size          | size  |  size      | size           |               |               |
-| empty         | empty       | empty         | empty |  empty     | empty          |               |               |
-| find -> end() | find -> npos|               |       |            |                |               |               |
-
 ### auto:
 ### vector:
 ```cpp
@@ -180,3 +175,63 @@ queue的基本操作有：
 判断队列空，如例：q.empty()，当队列空时，返回true。
 
 访问队列中的元素个数，如例：q.size()
+
+### public, protected, private
+ 1. 成员变量：   
+    public - 可以被任意调用  
+    protected - 子类和内部函数调用  
+    private - 只能内部函数调用  
+ 2. 继承方式：   
+    public - public->public, protected->protected, private->private.  
+    protected - public->protected, protected->protected, private->private.  
+    private - public->private, protected->private, private->private. 
+    
+### new、delete、malloc、free
+   new - 调用类的构造函数
+   delete - 调用类的析构函数
+   malloc - 分配内存
+   free  - 释放内存
+   
+### delete与 delete []区别
+    delete - 析构一个元素
+    delete[] - 析构一个元素数组。
+```cpp
+MemTest *mTest1=new MemTest[10];
+
+MemTest *mTest2=new MemTest;
+
+Int *pInt1=new int [10];
+
+Int *pInt2=new int;vector
+
+delete[]pInt1; 
+
+delete[]pInt2; 
+
+delete[]mTest1;
+
+delete[]mTest2;// - 出错
+
+```
+
+### 格式化输出：
+```cpp
+Int ("%d"): 32 Bit integer
+Long ("%ld"): 64 bit integer
+Char ("%c"): Character type
+Float ("%f"): 32 bit real value
+Double ("%lf"): 64 bit real value
+```
+
+### 析构和构造函数
+   定义一个对象时先调用基类的构造函数、然后调用派生类的构造函数；析构的时候恰好相反：先调用派生类的析构函数、然后调用基类的析构函数。
+
+## Pointer and array
+### 数组指针和指针数组
+   int array[3][3]
+   int *p[3] - 指针数组， 是数组  
+   (int**) p 不能和 array 互相赋值   
+   int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
+
+
+
