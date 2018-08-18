@@ -4,7 +4,7 @@
 [Stack](#stack)  
 [pair](#pair)  
 [priority_queue](#priority_queue)
-## [Class](#class)
+## [C++ Class](#class)
 
 ## stl
 | vector        | string      | deque         | stack | queue      | priority_queue | unordered_set | unordered_map |
