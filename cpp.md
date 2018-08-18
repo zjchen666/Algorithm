@@ -4,7 +4,7 @@
 [Stack](#stack)  
 [pair](#pair)  
 [priority_queue](#priority_queue)
-## Class
+## [Class](#class)
 
 ## stl
 | vector        | string      | deque         | stack | queue      | priority_queue | unordered_set | unordered_map |
@@ -176,6 +176,7 @@ queue的基本操作有：
 
 访问队列中的元素个数，如例：q.size()
 
+### class
 ### public, protected, private
  1. 成员变量：   
     public - 可以被任意调用  
