@@ -55,6 +55,11 @@ iterator is a pointer.
             res.push_back(*it);
         }
         reverse() 区间 [first,last)
+        
+        for (auto it = map.begin(); it != map.end(); it++){
+            it->first; // key
+            it->second; // values
+        }
  ```
 ### auto:
 ### vector:
