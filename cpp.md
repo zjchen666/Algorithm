@@ -2,6 +2,7 @@
 [Misc](#misc)   
 [String](#string)   
 [Stack](#stack)  
+[Vector](#vector)  
 [pair](#pair)  
 [priority_queue](#priority_queue)
 ## [C++ Class](#class)
@@ -67,6 +68,8 @@ iterator is a pointer.
    vector<int> nums
    iterator nums.begin(), nums.end()
    vector<int> map(26,0) -- Init a vector size 26 value 0
+   //2D vector initialization
+   vector<vector<int>> f(3, vector<int>(3, 0x3));
    vector<string>
 
    vector<double>
