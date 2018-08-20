@@ -44,7 +44,8 @@ sort(data.begin(), data.end(), greater<int>());
 ```cpp
 struct compare {
     bool operator()(const ListNode* l, const ListNode* r) {
-        return l->val > r->val;
+        return l->val > r->val; // reversed
+        return l->val < r->val; // not reversed
     }
 };
 ```
