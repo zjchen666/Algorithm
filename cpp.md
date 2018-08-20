@@ -149,6 +149,19 @@ int main () {
    set.insert(val)
    set.delete(val)
 ```
+### string:
+```cpp
+   string s, s.push_back(), s.size(), s.pop()
+   isalnum(c), isdigit(c), isalpha(c), tolower(c)
+   // find
+   s.find(a) != string::npos;
+   str.substr(start_pos, len) - python str[start:end]
+   // add
+   s + "sdsdsa" // is supported by CPP， 字符串操作
+   s.push_back() // char 类型操作
+   
+```
+
 ### queue:
 ```cpp
     queue <int> q
@@ -156,15 +169,6 @@ int main () {
     q.push()
     q.back()
     q.front()
-```
-### string:
-```cpp
-   string s, s.push_back(), s.size(), s.pop()
-   isalnum(c), tolower(c)
-   // find
-   s.find(a) != string::npos;
-   str.substr(start_pos, len) - python str[start:end]
-   s + "sdsdsa" is supported by CPP
 ```
    
 定义queue对象的示例代码如下：
