@@ -160,6 +160,8 @@ int main () {
 ```cpp
    string s, s.push_back(), s.size(), s.pop()
    isalnum(c), tolower(c)
+   // find
+   s.find(a) != string::npos;
    str.substr(start_pos, len) - python str[start:end]
    s + "sdsdsa" is supported by CPP
 ```
