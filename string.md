@@ -1,3 +1,4 @@
+
 ##
 ## 字符串
 ### 基础 知识点 ###
@@ -30,7 +31,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
   
   https://leetcode.com/problems/compare-version-numbers/description/
    
-## 子串处理
+## 一层循环的子串处理问题
 ```cpp
         i = 0, j = 0;
         while (j < length){
@@ -44,9 +45,11 @@ Return a string of one character whose ASCII code is the integer i. For example,
             }
         }
 ```
-https://leetcode.com/problems/reverse-words-in-a-string-ii/description/
+https://leetcode.com/problems/reverse-words-in-a-string-ii/
+https://leetcode.com/problems/count-binary-substrings/
 
-## LongestSubstring with k Distinct:
+## Sliding window 的问题
+  LongestSubstring with k Distinct:
 * 解法 sliding window + hash
 
 ```python
