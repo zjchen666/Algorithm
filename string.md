@@ -25,9 +25,9 @@ Return a string of one character whose ASCII code is the integer i. For example,
 * 子串处理
 ## 两个字符串比较
    solutions: 
-     1. 填充短的。
-     2. 按min(len1, len2)先处理。
-     3. 按max(len1, len2)先处理。
+     1. 填充短的。  
+     2. 按min(len1, len2)先处理。  
+     3. 按max(len1, len2)先处理。  
   
   https://leetcode.com/problems/compare-version-numbers/description/
    
@@ -45,7 +45,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
             }
         }
 ```
-https://leetcode.com/problems/reverse-words-in-a-string-ii/
+https://leetcode.com/problems/reverse-words-in-a-string-ii/  
 https://leetcode.com/problems/count-binary-substrings/
 
 ## Sliding window 的问题
