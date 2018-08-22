@@ -160,6 +160,10 @@ int main () {
    s + "sdsdsa" // is supported by CPP， 字符串操作
    s.push_back() // char 类型操作
    
+   // digital char to int convert
+   int -> char: c + '0'
+   char-> int: c - '0'
+   
 ```
 
 ### queue:
