@@ -81,9 +81,70 @@ https://leetcode.com/problems/number-of-segments-in-a-string/description/
                 
         return result
 ```
-https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/
-https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/
-https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/  
+https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/  
+https://leetcode.com/problems/longest-substring-without-repeating-characters/description/  
+
+### Rearrange String
+   Solution:
+      1. find the char with maximum repeat count.
+      2. use PQ to simulate the rearrange, return failure if can not finish.
+
+```cpp
+    string rearrangeString(string s, int k) {
+        vector<int> counts(26, 0);
+        priority_queue<pair<int, char>> pq;
+        string result;
+        
+        # find char with maximum count
+        if (k <= 1)
+            return s;
+        
+        for (int i = 0; i < s.size(); i++){
+            counts[s[i] - 'a']++;
+        }
+
+        // init the PQ
+        for (int i = 0; i < 26; i++){
+            if (counts[i] > 0){
+                pq.push({counts[i], 'a' + i});
+            }
+        }
+        
+        // rearrange the string with cache
+        int pos = 0;
+        int length = s.size();
+        while (!pq.empty())
+        {
+            vector<pair<int, char>> cache;
+            // insert k char or remain chars for each round
+            int n = min(k, length);
+            for (int i = 0; i < n; i++)
+            {
+                if (pq.empty())
+                {
+                    return "";
+                }
+                pair<int, int> c = pq.top();
+                pq.pop();
+                c.first--;
+                result.push_back(c.second);
+                if (c.first > 0)
+                    cache.push_back({c.first, c.second});
+                length--;
+            }
+
+            for (auto it: cache)
+            {
+                pq.push(it);
+            }
+        }
+        return result;
+    }
+```
+https://leetcode.com/problems/rearrange-string-k-distance-apart/description/  
+https://leetcode.com/problems/reorganize-string/description/  
+https://leetcode.com/problems/task-scheduler/description/  
 
 * stack相关问题
 
