@@ -164,6 +164,8 @@ int main () {
    int -> char: c + '0'
    char-> int: c - '0'
    
+   // string compare
+   string1 > string2
 ```
 
 ### queue:
