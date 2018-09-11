@@ -45,8 +45,7 @@ Array
  ### 模板 ###
  ```python
      # partition
-     def two_pointers(self, array, target):
-         lo = 0
+     def two_pointers(self, array, target):         lo = 0
          hi = len(array) - 1
          while lo < hi:
              while lo < hi and array[lo] > target:
@@ -69,14 +68,15 @@ Array
  ### 解法 ###
  * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
  * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
- 
       + 两种类型: __快慢指针__ 和 __窗口问题__  
       + 窗口问题 分两种：  
 __window 从头到尾__ ：
 - 主要是用来优化两层for循环。 
 - 外层仍然需要从头到尾遍历。  
 - 内层不需要回退！
-- 题目：[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
+- 题目：
+[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
+https://leetcode.com/problems/max-consecutive-ones-ii/description/
 
 ```python
     # window 类 forward pointers 优化 O(N^2) 到 O(N):
