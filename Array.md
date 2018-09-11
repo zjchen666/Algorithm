@@ -75,7 +75,7 @@ __window 从头到尾__ ：
 - 外层仍然需要从头到尾遍历。  
 - 内层不需要回退！
 - 题目：
-[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)  
+[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)   
 https://leetcode.com/problems/max-consecutive-ones-ii/description/
 
 ```python
