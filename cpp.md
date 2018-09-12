@@ -38,6 +38,7 @@ swap（x, y）
 
 ### sort()   
 sort(a.begin(), a.end());  
+sort(a.rbegin(), a.rend());  
 sort(data.begin(), data.end(), greater< int >());
    
 ### comparator
