@@ -38,7 +38,7 @@ swap（x, y）
 
 ### sort()   
 sort(a.begin(), a.end());  
-sort(data.begin(), data.end(), greater<int>());
+sort(data.begin(), data.end(), greater< int >());
    
 ### comparator
 ```cpp
