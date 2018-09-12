@@ -16,7 +16,11 @@
 * Convert preorder/inorder/postorder into binary tree. -> Traverse. 注意如何找root，如何slice左右子树。
 * 两个Tree 比较问题 - 考虑每个树的subtree该如何比较， divide conquer
 * Sub Tree 问题
-* Path Sum 问题
+* Path 问题
+  Solution: DFS left and right, 根据返回值计算结果。
+  典型题目：
+  https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/description/
+  https://leetcode.com/problems/binary-tree-longest-consecutive-sequence-ii/
 * 动态规划相关
 * 数据结构
 * [Tree 的 serialize 和 deserialize](#serialize/deserialize)
