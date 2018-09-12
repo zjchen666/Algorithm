@@ -23,6 +23,9 @@ Return a string of one character whose ASCII code is the integer i. For example,
 * hash table(可以用size 为 128 byte的数组替换)
 * DP
 * 子串处理
+* 字符串替换： 
+   - 从后向前替换
+   https://leetcode.com/problems/find-and-replace-in-string/description/
 ## 两个字符串比较
    solutions: 
      1. 填充短的。  
