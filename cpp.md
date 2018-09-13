@@ -160,6 +160,8 @@ int main () {
    // add
    s + "sdsdsa" // is supported by CPP， 字符串操作
    s.push_back() // char 类型操作
+   // replace
+   s.replace(pos, len, str);
    
    // digital char to int convert
    int -> char: c + '0'
