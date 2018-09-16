@@ -69,7 +69,7 @@
    - 按照对角线初始化以及搜索。  
    - O(n^3) burst bullon
 ```python
-        n = len(s)
+https://leetcode.com/problems/regular-expression-matching/description/        n = len(s)
         f = [[False for i in range(n)] for j in range(n)]
         
         # length == 1
@@ -116,5 +116,7 @@ https://leetcode.com/problems/flip-game-ii/description/
     
     
 #### 双序列型动态规划
-   - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。
-   
+   - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。  
+https://leetcode.com/problems/regular-expression-matching/description/  
+https://leetcode.com/problems/wildcard-matching/description/  
+   
