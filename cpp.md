@@ -253,8 +253,8 @@ Double ("%lf"): 64 bit real value
 
 ## Pointer and array
 ### 数组指针和指针数组
-   int array[3][3]
-   int *p[3] - 指针数组， 是数组  
+   int array[3][3]   
+   int * p[3] - 指针数组， 是数组  
    (int**) p 不能和 array 互相赋值   
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
 
