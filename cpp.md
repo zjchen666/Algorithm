@@ -258,5 +258,7 @@ Double ("%lf"): 64 bit real value
    (int**) p 不能和 array 互相赋值   
    int (*p)[3] 数组指针， 指向数组 可以和 array 互相赋值， 二维矩阵名其实就是数组指针  
 
-
+### Const
+   int * const p - 指针指向地址不能改
+   int const *p - 指向地址内容不能改
 
