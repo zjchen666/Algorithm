@@ -69,8 +69,7 @@ Array
  * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
  * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
    - __快慢指针__ 
-  window 慢指针不用走到尾  
-  remove duplicate:  
+  __remove duplicate__:  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 ```cpp
