@@ -70,7 +70,7 @@ Array
  * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
    - __快慢指针__ 
   window 慢指针不用走到尾  
-  remove duplicate:
+  remove duplicate:  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 ```cpp
