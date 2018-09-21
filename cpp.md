@@ -136,7 +136,7 @@ int main () {
 ```cpp
    Min Heap: priority_queue<int, vector <int>, greater<int>> min_heap;    
    Max Heap: priority_queue<int> max_heap;  
-   Heap with self defined comparator: priority_queue<int, vector <int>, cmp> heap;
+   Heap with self defined comparator: priority_queue<int, vector <int>, cmp> heap; //cmp 是第三个参数
 ```
 ### unordered_map:
 ```cpp
