@@ -1,4 +1,4 @@
-## Dynamic programming ##
+## Dynamic Programming ##
 ### 动态规划分类 ###
 + [序列型动态规划](#序列型动态规划)
 + [坐标型动态规划](#坐标型动态规划)
@@ -69,7 +69,7 @@
    - 按照对角线初始化以及搜索。  
    - O(n^3) burst bullon
 ```python
-https://leetcode.com/problems/regular-expression-matching/description/        n = len(s)
+        n = len(s)
         f = [[False for i in range(n)] for j in range(n)]
         
         # length == 1
@@ -91,6 +91,8 @@ https://leetcode.com/problems/regular-expression-matching/description/        n 
 
         return f[0][-1]
 ```
+https://leetcode.com/problems/regular-expression-matching/description/
+https://leetcode.com/problems/longest-palindromic-substring/description/
 
 #### 博弈型动态规划
     要理解 所有子问题必胜则必拜， 一个子问题必败则必胜。
