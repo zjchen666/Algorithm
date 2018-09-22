@@ -91,7 +91,6 @@
 
         return f[0][-1]
 ```
-https://leetcode.com/problems/regular-expression-matching/description/
 https://leetcode.com/problems/longest-palindromic-substring/description/
 
 #### 博弈型动态规划
