@@ -87,7 +87,8 @@ https://leetcode.com/problems/count-and-say/description/
 ```
 https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/  
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/  
-https://leetcode.com/problems/longest-substring-without-repeating-characters/description/  
+https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ 
+https://leetcode.com/problems/minimum-window-substring/description/
 
 ### Rearrange String
    Solution:
