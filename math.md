@@ -1,4 +1,11 @@
 ### 主要考点 ###
+## reverse a number ##
+```cpp
+    
+    while (x)
+```
+https://leetcode.com/problems/palindrome-number/description/  
+https://leetcode.com/problems/reverse-integer/description/
 
 ## 模运算 ##
 运算规则
