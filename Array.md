@@ -15,7 +15,7 @@ Array
 * [swich sort 问题](#switch-sort)
 
 ## switch sort ##
-   适用于 0 < nums[i] <= n, n 为array的size一类问题。 solution: switch reorder
+   适用于 0 < nums[i] <= n, n 为array的size一类问题。 solution: switch and re-order  
    https://leetcode.com/problems/find-all-duplicates-in-an-array/description/  
    https://leetcode.com/problems/first-missing-positive/description/
 ```cpp
