@@ -1,8 +1,13 @@
 ### 主要考点 ###
 ## reverse a number ##
 ```cpp
-    
+    int n = 0;
     while (x)
+    {
+        n = n * 10;
+        n += x % 10;
+        x = x / 10;
+    }
 ```
 https://leetcode.com/problems/palindrome-number/description/  
 https://leetcode.com/problems/reverse-integer/description/
