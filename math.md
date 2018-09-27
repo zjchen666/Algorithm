@@ -1,3 +1,4 @@
+
 ### 主要考点 ###
 ## reverse a number ##
 ```cpp
@@ -8,6 +9,13 @@
         n += x % 10;
         x = x / 10;
     }
+    
+    //overflow
+    tmp = res * 10 + x % 10;
+    if (tmp / 10 != res)
+      //overflow
+    else
+        res = tmp;
 ```
 https://leetcode.com/problems/palindrome-number/description/  
 https://leetcode.com/problems/reverse-integer/description/
