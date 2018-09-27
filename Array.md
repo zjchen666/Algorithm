@@ -12,6 +12,35 @@ Array
 * [Subsequence 问题](#subsequence)
 * [Interval 问题](#interval)
 * [Select and Sort](/quicksort_mergesort.md)
+* [swich sort 问题](#switch-sort)
+
+## switch sort ##
+   适用于 0 < nums[i] <= n, n 为array的size一类问题。 solution: switch reorder
+   https://leetcode.com/problems/find-all-duplicates-in-an-array/description/  
+   https://leetcode.com/problems/first-missing-positive/description/
+```cpp
+     vector<int> findDuplicates(vector<int>& nums) {
+        vector<int> res;
+        
+        for (int i = 0; i < nums.size(); i++)
+        {
+            while ((nums[i] != i + 1) && (nums[i] != nums[nums[i] - 1]))
+            {
+                int tmp = nums[i] - 1;
+                swap(nums[i], nums[tmp]);
+            }
+        }
+        
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] != i + 1)
+            {
+                res.push_back(nums[i]);
+            }
+        }
+        return res;
+    }
+```
 
 ## Array rotation ##
 ### 解法 ###
@@ -67,9 +96,9 @@ Array
  
  ### 解法 ###
  * 相向型指针 - Two elements, Container With Most Water, partition array, subarray. 
- * 前向型指针 - remove duplicate, intersection of arrays, presum, window。
-   - __快慢指针__ 
-  __remove duplicate__:  
+ * 前向型指针 - remove duplicate, intersection of arrays, presum, window。  
+  - __快慢指针__ 
+  __remove duplicate__:    
   https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 ```cpp
