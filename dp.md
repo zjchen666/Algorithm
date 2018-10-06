@@ -114,8 +114,8 @@ https://leetcode.com/problems/longest-palindromic-substring/description/
         return False
 ```
 https://leetcode.com/problems/can-i-win/description/   
-https://leetcode.com/problems/flip-game-ii/description/  
-https://leetcode.com/problems/guess-number-higher-or-lower-ii/description/
+https://leetcode.com/problems/flip-game-ii/description/   
+https://leetcode.com/problems/guess-number-higher-or-lower-ii/description/  
 https://leetcode.com/problems/stone-game/description/
     
 #### 双序列型动态规划
