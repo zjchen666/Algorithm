@@ -94,7 +94,8 @@
 https://leetcode.com/problems/longest-palindromic-substring/description/
 
 #### 博弈型动态规划
-    要理解 所有子问题必胜则必拜， 一个子问题必败则必胜。
+- 要理解 所有子问题必胜则必拜， 一个子问题必败则必胜。
+- 注意minimax如何处理。每一步要按照上一步的min（对手最坏情况）来计算。
     
     1. DFS + memo 解法模板，
 ```python
@@ -114,10 +115,12 @@ https://leetcode.com/problems/longest-palindromic-substring/description/
 ```
 https://leetcode.com/problems/can-i-win/description/   
 https://leetcode.com/problems/flip-game-ii/description/
-    
+https://leetcode.com/problems/guess-number-higher-or-lower-ii/description/
+https://leetcode.com/problems/stone-game/description/
     
 #### 双序列型动态规划
    - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。  
+   - 扫描方式为按行扫描。
 https://leetcode.com/problems/regular-expression-matching/description/  
 https://leetcode.com/problems/wildcard-matching/description/  
    
