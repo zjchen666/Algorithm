@@ -120,7 +120,7 @@ https://leetcode.com/problems/stone-game/description/
     
 #### 双序列型动态规划
    - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。  
-   - 扫描方式为按行扫描。
+   - 扫描方式为按行扫描。  
 https://leetcode.com/problems/regular-expression-matching/description/  
 https://leetcode.com/problems/wildcard-matching/description/  
    
