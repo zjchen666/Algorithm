@@ -251,26 +251,23 @@ class Solution:
 ```
 ### Maximum Subarray ###
    + 使用以下模版, 注意min_prefix = 0而不是nums[0]，因为全为正数的话，最大sum是与0之差。
-
-```python
-class Solution:
-    """
-    @param: nums: A list of integers
-    @return: A integer indicate the sum of max subarray
-    """
-    def maxSubArray(self, nums):
-        # write your code here
-        if not nums:
-            return 0
-            
-        max_sum = nums[0]
-        min_prefix = 0
-        for i in range(1, len(nums)):
-            nums[i] += nums[i-1]
-            min_prefix = min(min_prefix, nums[i-1])
-            max_sum = max(max_sum, nums[i] - min_prefix)
-        return max_sum
+   
+```cpp
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int min_sum = 0, sum = 0, result = INT_MIN;
+        
+        for (auto num: nums) {
+            sum += num;
+            result = max(sum - min_sum, result);
+            min_sum = min(sum, min_sum);
+        }
+        return result;
+    }
+};
 ```
+
 ### Subarray Sum Closet ###
 + 依然是presum，之后需要排序，找出相邻节点最小差值。
 ```python
