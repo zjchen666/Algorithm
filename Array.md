@@ -13,6 +13,7 @@ Array
 * [Interval 问题](#interval)
 * [Select and Sort](/quicksort_mergesort.md)
 * [swich sort 问题](#switch-sort)
+* [One/Two Pass 问题](#one-two-pass)
 
 ## switch sort ##
    适用于 0 < nums[i] <= n, n 为array的size一类问题。 solution: switch and re-order  
@@ -41,6 +42,22 @@ Array
         return res;
     }
 ```
+## one two pass ##
+```cpp
+   left -> right calculate status.
+   right -> left calculate status.
+```  
+53 Maximum Subarray  
+121 Best Time to Buy and Sell Stock  
+152 Maximum Product Subarray  
+238 Product of Array Except Self  
+739 Daily Temperatures  
+769 Max Chunks to Make Sorted  
+770 Max Chunks to Make Sorted II  
+821 Shortest Distance to a Character  
+845 Longest Mountain in Array  
+926 Flip String to Monotone Increasing
+
 
 ## Array rotation ##
 ### 解法 ###
