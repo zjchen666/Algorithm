@@ -56,35 +56,33 @@ https://leetcode.com/problems/count-and-say/description/
 https://leetcode.com/contest/weekly-contest-107/problems/long-pressed-name/
 
 ## Sliding window 的问题
-  LongestSubstring with k Distinct:
-* 解法 sliding window + hash
-
-```python
-    def lengthOfLongestSubstringKDistinct(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        n = len(s)
-        result = 0
-        hash = {}
-
-        j = 0
-        for i in xrange(n):
-            while j < n:
-                if s[j] in hash or len(hash) <= k - 1:
-                    hash[s[j]] = hash.get(s[j], 0) + 1
-                    j += 1
-                    result = max(result, j-i)
-                    continue
-                else:
-                    break
+  模板
+```cpp
+    int lengthOfLongestSubstringKDistinct(string s, int k) {
+        int n = s.size();
+        unordered_map<int, int> map;
+        int left = 0, res = 0;
+        
+        // scan from begin to end
+        for (int right = 0; right < n; right++) {
+            // do something
+            map[s[right]]++;
             
-            hash[s[i]] = hash[s[i]] - 1
-            if hash[s[i]] == 0:
-                del hash[s[i]]
+            // condition is broken, fix it
+            while (map.size() > k) {
+                // update result here if for a minimum result. for instance, minimum slideing window
                 
-        return result
+                map[s[left]]--;
+                if (map[s[left]] == 0) map.erase(s[left]);
+                left++;
+            }
+            
+            // update result, maxinum result, you may update result in while loop for a minmum result
+            res = max(res, right - left + 1);
+        }
+        
+        return res;
+    }
 ```
 https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/  
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/  
