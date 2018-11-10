@@ -90,7 +90,9 @@ https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characte
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/  
 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ 
 https://leetcode.com/problems/minimum-window-substring/description/  
-[424] https://leetcode.com/problems/longest-repeating-character-replacement/
+[424] https://leetcode.com/problems/longest-repeating-character-replacement/  
+https://leetcode.com/problems/max-consecutive-ones-ii/description/
+
 ### Rearrange String
    Solution:
       1. find the char with maximum repeat count.
