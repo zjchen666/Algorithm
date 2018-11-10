@@ -89,8 +89,8 @@ https://leetcode.com/contest/weekly-contest-107/problems/long-pressed-name/
 https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/  
 https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/  
 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ 
-https://leetcode.com/problems/minimum-window-substring/description/
-
+https://leetcode.com/problems/minimum-window-substring/description/  
+[424] https://leetcode.com/problems/longest-repeating-character-replacement/
 ### Rearrange String
    Solution:
       1. find the char with maximum repeat count.
