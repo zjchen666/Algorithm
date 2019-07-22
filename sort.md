@@ -65,10 +65,10 @@ class Solution:
         # key point 2: every time you compare left & right, it should be 
         # left <= right not left < right
         while left <= right:
-            while left <= right and A[left] < pivot:
+            while A[left] < pivot:
                 left += 1
             
-            while left <= right and A[right] > pivot:
+            while A[right] > pivot:
                 right -= 1
             
             if left <= right:
