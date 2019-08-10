@@ -10,7 +10,7 @@
 * [BFS, Topological Sort and Union Find](/graph.md)
 * [DFS](/dfs.md)
 * [Binary Tree](/binary_tree.md)
-* [Math](/math.md)
 * [DP](/dp.md)
+* [Math](/math.md)
 
 
