@@ -2,7 +2,7 @@
 
 ## 目录
 * [Binary Seach](/binary_search.md)
-* [Two pointers](/two_pointer.md)
+* [Two pointers](/two_pointers.md)
 * [Linked List](/link_list.md)
 * [Array](/Array.md)
 * [String](/string.md)
