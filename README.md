@@ -1,12 +1,15 @@
 # Algorithm and Data Structure Study #
 
 ## 目录
+* [String](/string.md)
+* [Binary Seach](/binary_search.md)
 * [Array](/Array.md)
 * [Linked List](/link_list.md)
-* [Graph](/graph.md)
-* [Tree](/binary_tree.md)
-* [String](/string.md)
+* [Binary Tree](/binary_tree.md)
+* [dfs](/dfs.md)
 * [Math](/math.md)
-* [Stack](/stack.md)
+* [Stack and Heap](/stack.md)
+* [DP](/dp.md)
+* [Bfs, Topological sort and union find](/graph.md)
 
 
