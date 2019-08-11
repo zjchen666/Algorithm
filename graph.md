@@ -102,10 +102,10 @@
   逆后序输出结果即可。
   
   **问法：**
-  - 求任意1个拓扑序（Topological Order）
-  - 问是否存在拓扑序（是否可以被拓扑排序）
-  - 求所有的拓扑序
-  - 是否存在且仅存在一个拓扑序
+  - 求任意1个拓扑序（Topological Order）- BFS
+  - 问是否存在拓扑序（是否可以被拓扑排序） - BFS
+  - 求所有的拓扑序. - DFS
+  - 是否存在且仅存在一个拓扑序. - BFS queue最多只有一个元素
 
 ```python
 class Solution(object):
