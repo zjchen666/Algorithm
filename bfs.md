@@ -29,8 +29,9 @@ python
                q.insert(0, next)
                size -= 1
 ```
-cpp
+c++
 ```cpp
+   分层
    template <class name T>
    void bfs(T & node):
        queue<T> q = {node};
@@ -44,6 +45,23 @@ cpp
                ...
                q.push_back(new_node);
                size -= 1;
+       }
+       return;
+```
+
+```cpp
+   不分层
+   template <class name T>
+   void bfs(T & node):
+       queue<T> q = {node};
+       int size = 0;
+       
+       while (!q.empty()) {
+           head_node = q.pop_front();
+           # find next level nodes and push them into queue
+             //do something
+           q.push_back(new_node);
+           size -= 1;
        }
        return;
 ```
