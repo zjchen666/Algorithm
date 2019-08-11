@@ -18,6 +18,7 @@
       [ocean-water-flow](https://leetcode.com/problems/pacific-atlantic-water-flow/description/)
 
 ### 模板 ###
+python
 ```python
    def bfs( node ):
        q = [node]
@@ -28,6 +29,7 @@
                q.insert(0, next)
                size -= 1
 ```
+cpp
 ```cpp
    template <class name T>
    void bfs(T & node):
