@@ -2,7 +2,9 @@
 单调栈这种数据结构，通常应用在一维数组上。
 如果遇到的问题，和前后元素之间的大小关系有关系的话，我们可以试图用单调栈来解决。
 入栈的元素一般是index,O(n)线性时间的复杂度。
-```templete
+
+模板
+```python
     def mono_stack(nums):        
         result = 0
         stack = []
@@ -16,6 +18,7 @@
             
         return result 
 ```
+
 [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/description/)  
 [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/description/)  
 [sum-of-subarray-minimums](https://leetcode.com/problems/sum-of-subarray-minimums/description/)  
