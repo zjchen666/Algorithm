@@ -384,6 +384,8 @@ class Solution:
    
 ## Interval ##
    * 扫描线法
+   1. 把所有关键点（起点，终点）排序。
+   2. 扫描一遍输出结果。 中间计算可能会用到其它数据结构，（高度，pq），注意重复点的处理。
 ```python
     def helper(self, x, y):
         if x[0] != y[0]:
