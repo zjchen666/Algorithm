@@ -386,6 +386,7 @@ class Solution:
    * 扫描线法
    1. 把所有关键点（起点，终点）排序。
    2. 扫描一遍输出结果。 中间计算可能会用到其它数据结构，（高度，pq/multiset），注意重复点的处理。
+   3. 判断两个线段相交的充要条件： max(A.start, B.start) <= min(A.end, B.end);
    
 ```python
     def helper(self, x, y):
