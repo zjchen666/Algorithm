@@ -116,6 +116,7 @@ Array
  * 前向型指针 - remove duplicate, intersection of arrays, presum, window。  
   - __快慢指针__ 
   __remove duplicate__:    
+  283. Move Zeroes  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/  
   https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 ```cpp
