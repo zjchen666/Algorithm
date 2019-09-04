@@ -4,8 +4,17 @@ Traverse
 ==============
 ## Subset ##
    1. 选或不选的 DFS方法
-   2. 和 combination类似的扫描DFS的方法。
-   3. bit mask的方法。
+   2. 标准DFS的方法。
+   3. bit mask的方法：
+   ```cpp
+       for (int i; i < 1 << n; ++i) {
+           for(int j; j < n; ++j) {
+               if (i & 1 << j)
+               // add | 标记
+           }
+           // get one result
+       }
+   ```
    4. 如何去重：
        a. 先排序。
        b. 如果当前值和前一个相同， 跳过去。
