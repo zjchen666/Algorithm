@@ -57,7 +57,7 @@ https://leetcode.com/problems/string-compression/description/
 https://leetcode.com/problems/number-of-segments-in-a-string/description/  
 https://leetcode.com/problems/count-and-say/description/  
 https://leetcode.com/contest/weekly-contest-107/problems/long-pressed-name/  
-https://leetcode.com/problems/brace-expansion/  
+https://leetcode.com/problems/brace-expansion/  //TODO optimize
 
 ## Sliding window 的问题
   模板
