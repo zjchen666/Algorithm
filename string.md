@@ -33,7 +33,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
      2. 按min(len1, len2)先处理。  
      3. 按max(len1, len2)先处理。  
   
-  https://leetcode.com/problems/compare-version-numbers/description/
+  https://leetcode.com/problems/compare-version-numbers/description/  
   add numbers  
   verify alien dictionary  
   
@@ -57,7 +57,7 @@ https://leetcode.com/problems/string-compression/description/
 https://leetcode.com/problems/number-of-segments-in-a-string/description/  
 https://leetcode.com/problems/count-and-say/description/  
 https://leetcode.com/contest/weekly-contest-107/problems/long-pressed-name/
-https://leetcode.com/problems/brace-expansion/
+https://leetcode.com/problems/brace-expansion/  
 
 ## Sliding window 的问题
   模板
