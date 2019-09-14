@@ -22,8 +22,23 @@ Trie Tree
        TrieNode* cur = root;
        for (char c : word) {
            if (nullptr == cur->children[c - 'a']) {
+               cur->children[c - 'a'] = new TrieNode();
            }
+           cur = cur->children[c - 'a'];
        }
+       cur->is_left = true;
+       return;
+   }
+   
+   bool search(string word) {
+       TrieNode* cur = root;
+       for (char c : word) {
+           if (nullptr == cur->children[c - 'a']) {
+               return false;
+           }
+           cur = cur->children[c - 'a'];
+       }
+       return cur->is_leaf;
    }
 ```
 ```python
