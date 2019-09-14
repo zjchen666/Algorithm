@@ -12,10 +12,23 @@ Trie Tree
 - 空间优化 hash table的字符串相关问题， 
 
 ### 数据结构 ###
-  hash table - setdefault()
-  The method setdefault() is similar to get(), but will set dict[key]=default if key is not already in dict.
-
+```cpp
+   class TrieNode {
+       bool is_leaf;
+       TreeNode* children[26];
+   };
+   
+   void insert(string word) {
+       TrieNode* cur = root;
+       for (char c : word) {
+           if (nullptr == cur->children[c - 'a']) {
+           }
+       }
+   }
+```
 ```python
+  ## hash table - setdefault()
+  ## The method setdefault() is similar to get(), but will set dict[key]=default if key is not already in dict.
 class Trie(object):
 
     def __init__(self):
