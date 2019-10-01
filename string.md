@@ -79,13 +79,12 @@ https://leetcode.com/problems/brace-expansion/  //TODO optimize
             // condition is broken, fix it
             while (map.size() > k) {
                 // update result here if for a minimum result. for instance, minimum slideing window
-                
                 map[s[left]]--;
                 if (map[s[left]] == 0) map.erase(s[left]);
                 left++;
             }
             
-            // update result, maxinum result, you may update result in while loop for a minmum result
+            // update result here for maxinum result
             res = max(res, right - left + 1);
         }
         
