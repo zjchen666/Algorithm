@@ -93,7 +93,8 @@ https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-charac
 https://leetcode.com/problems/longest-substring-without-repeating-characters/description/ 
 https://leetcode.com/problems/minimum-window-substring/description/  
 [424] https://leetcode.com/problems/longest-repeating-character-replacement/  
-https://leetcode.com/problems/max-consecutive-ones-ii/description/
+https://leetcode.com/problems/max-consecutive-ones-ii/description/  
+https://leetcode.com/problems/get-equal-substrings-within-budget/
 
 ### Rearrange String
    Solution:
