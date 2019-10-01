@@ -1,6 +1,10 @@
 
-##
-## 字符串
+## 考点
+  1. add string  
+  2. sliding window  
+  3. one pass scan  
+  4. rearrang string  
+
 ### 基础 知识点 ###
  * ASCII 码
 ASCII 码一共规定了128个字符的编码， 前32个不能打印出来，只占用了一个字节的后面7位，最前面的一位统一规定为0。
