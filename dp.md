@@ -21,10 +21,19 @@
 #### 背包型动态规划
    * 0-1 背包：
    - 选 或 不选 
-   - 数组size为 v + 1
+   - 2D 数组 size为 f[n + 1][v + 1]
    - F[i][j] = max(F[i-1][j], F[i - 1][j - W[i]] + C[i])  
-   - 滚动数组需要逆序计算
-      
+   - 优化为一维滚动数组需要逆序计算， size： f[v + 1] 
+```cpp
+    vector<vector<int>> f(v + 1, vector<int>(n + 1, 0));
+    for (int i = 0; i <= n; ++i) {
+        for (int j = 0; j <= v; ++j) {
+            if (j > A[i])
+                f[i][j] = max(f[i - 1][j], f[i - 1][j - A[i]] + A[i]);
+        }
+    }
+    return f[n][v];
+```
 ```python
       # n - number of items
       # V - volume of backpack
