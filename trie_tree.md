@@ -16,6 +16,12 @@ Trie Tree
    class TrieNode {
        bool is_leaf;
        TrieNode* children[26];
+       TrieNode () {
+           is_leaf = false;
+           for (int i = 0; i < 26; ++i) {
+               children[i] = nullptr;
+           }
+       }
    };
    
    void insert(string word) {
