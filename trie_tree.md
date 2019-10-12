@@ -15,7 +15,7 @@ Trie Tree
 ```cpp
    class TrieNode {
        bool is_leaf;
-       TreeNode* children[26];
+       TrieNode* children[26];
    };
    
    void insert(string word) {
