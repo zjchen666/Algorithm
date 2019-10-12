@@ -14,6 +14,7 @@ Trie Tree
 ### 数据结构 ###
 ```cpp
    class TrieNode {
+       public:
        bool is_leaf;
        TrieNode* children[26];
        TrieNode () {
@@ -32,7 +33,7 @@ Trie Tree
            }
            cur = cur->children[c - 'a'];
        }
-       cur->is_left = true;
+       cur->is_leaf = true;
        return;
    }
    
