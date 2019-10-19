@@ -2,7 +2,24 @@
 * single array
 * multi array
 
-
+```cpp
+    int binarySearch(vector<int> nums, target) {
+        int lo = 0, hi = num.size() - 1;
+        
+        while (lo + 1 < hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] < target) {
+                lo = mid;
+            } else {
+                hi = mid;
+            }
+        }
+        
+        if (nums[lo] == target) return lo;
+        if (nums[hi] == target) return hi;
+        return -1;
+    }
+```
 ### 查找 target
 ```python
    def binarySearch(self, array, target):
