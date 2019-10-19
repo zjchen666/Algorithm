@@ -42,3 +42,8 @@
                 return mid
         return lo
 ```
+
+### 切分数组
+Divide some goods into groups and put them into different bags.
+find the minimum size of bag
+https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
