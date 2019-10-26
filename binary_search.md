@@ -64,25 +64,38 @@
 1. 定义出 answer的范围 min - max
 2. 在范围内二分查找，依据满足条件或不满足条件来缩小范围
 ```cpp
-       int binarySearch(vector<int> nums) {
-        int lo = 0, hi = num.size() - 1;
+    int binarySearch(vector<int>& nums, int m) {
+        long lo = 0, hi = 0;
+        
+        for (int num : nums) {
+            lo = lo > num ? lo : num;
+            hi += num;
+        }
+        
+        if (m == 1) return hi;
         
         while (lo + 1 < hi) {
-            int target = lo + (hi - lo) / 2;
-            if (isValid(mid, nums) < target) {
-                lo = mid;
-            } else {
+            int mid = lo + (hi - lo) / 2;
+            
+            if (isValid(mid, m, nums)) {
                 hi = mid;
+            } else {
+                lo = mid;
             }
         }
         
-        if (nums[lo] == target) return lo;
-        if (nums[hi] == target) return hi;
-        return -1;
+        if (isValid(lo, m , nums)) return lo;
+        
+        return hi;
     }
     
-    bool/int isValid(target) {
-        // verify the target.
+    bool isValid(int target, int m, vector<int> & nums) {
+        int count = 1;
+        long sum = 0;
+        
+        //validate the candidate
+                
+        return true;
     }
 ```
 https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  
