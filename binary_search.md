@@ -1,7 +1,8 @@
 ## Binary Search ##
-* single array
-* multi array
+* 二分查找
+* 二分答案
 
+### 查找 target
 ```cpp
     int binarySearch(vector<int> nums, target) {
         int lo = 0, hi = num.size() - 1;
@@ -20,7 +21,6 @@
         return -1;
     }
 ```
-### 查找 target
 ```python
    def binarySearch(self, array, target):
         n = len(array)
@@ -60,7 +60,31 @@
         return lo
 ```
 
-### 切分数组
-Divide some goods into groups and put them into different bags.
-find the minimum size of bag
-https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+### 二分答案
+1. 定义出 answer的范围 min - max
+2. 在范围内二分查找，依据满足条件或不满足条件来缩小范围
+```cpp
+       int binarySearch(vector<int> nums) {
+        int lo = 0, hi = num.size() - 1;
+        
+        while (lo + 1 < hi) {
+            int target = lo + (hi - lo) / 2;
+            if (isValid(mid, nums) < target) {
+                lo = mid;
+            } else {
+                hi = mid;
+            }
+        }
+        
+        if (nums[lo] == target) return lo;
+        if (nums[hi] == target) return hi;
+        return -1;
+    }
+    
+    bool/int isValid(target) {
+        // verify the target.
+    }
+```
+https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  
+https://leetcode.com/problems/split-array-largest-sum
+
