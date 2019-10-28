@@ -33,14 +33,15 @@ Return a string of one character whose ASCII code is the integer i. For example,
    
 ## 两个字符串比较
    solutions:   
-     1. 填充短的。  
-     2. 按min(len1, len2)先处理。  
-     3. 按max(len1, len2)先处理。  
+     1. 填充短的。  https://leetcode.com/problems/compare-version-numbers/description/  
+     2. 按min(len1, len2)先处理。  verify alien dictionary  
+     3. 按max(len1, len2)先处理。  add numbers  
+     4. 同向 two pointer。 https://leetcode.com/problems/long-pressed-name/  
+     
   
-  https://leetcode.com/problems/compare-version-numbers/description/  
-  add numbers  
-  verify alien dictionary  
   
+  
+
 ## 一层循环的子串处理问题
 ```cpp
         i = 0, j = 0;
