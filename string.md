@@ -44,14 +44,13 @@ Return a string of one character whose ASCII code is the integer i. For example,
 ## 一层循环的子串处理问题
 ```cpp
         i = 0, j = 0;
-        while (j < length){
+        // scan string
+        while (j < s.size()){
             j++;
             # end or condition
-            if (str[j] == ' ' || j == str.size())
-            {
-                # do something
-                reverse(str.begin() + i, str.begin() + j);
-                i = j + 1;
+            if (condition meet or j == s.size()) {
+                # update
+                # i = j;
             }
         }
 ```
@@ -60,8 +59,9 @@ https://leetcode.com/problems/count-binary-substrings/
 https://leetcode.com/problems/string-compression/description/  
 https://leetcode.com/problems/number-of-segments-in-a-string/description/  
 https://leetcode.com/problems/count-and-say/description/  
-https://leetcode.com/contest/weekly-contest-107/problems/long-pressed-name/  
-https://leetcode.com/problems/brace-expansion/  //TODO optimize
+https://leetcode.com/problems/long-pressed-name/  
+https://leetcode.com/problems/brace-expansion/  //TODO optimize  
+https://leetcode.com/problems/expressive-words/
 
 ## Sliding window 的问题
   模板
