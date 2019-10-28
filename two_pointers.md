@@ -6,10 +6,13 @@
  * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
  * intersection of two arrays. 先sort然后同向移动，找出相同的值。
  * subarray问题，一般都是要先求presum。
- ### 相对 move ###
-    * Two sum
+ ### 相对双指针 ###
+     一般需要sort
+    * Two sum 
     * Container With Most Water
- ### 同向move ###
+ ### 同向双指针 ###
+    1. sliding window  
+    2. pointer 1 for string 1 and point 2 for string 2.  
     Minimum Size Subarray Sum
     
 Given an array of integers, find how many pairs in the array such that their sum is less than or equal to a specific target number. Please return the number of pairs.
