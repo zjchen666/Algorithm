@@ -44,10 +44,8 @@ Return a string of one character whose ASCII code is the integer i. For example,
 
 ## 一层循环的子串处理问题
 ```cpp
-        i = 0, j = 0;
-        // scan string
-        while (j < s.size()){
-            j++;
+        i = 0;
+        for (int j = 0; j <= s.size(); ++j){
             # end or condition
             if (condition meet or j == s.size()) {
                 # update
