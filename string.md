@@ -2,7 +2,7 @@
 ## 考点
   1. add string  
   2. sliding window  
-  3. one pass scan  
+  3. one pass scan to proccessing substr
   4. rearrang string  
 
 ### 基础 知识点 ###
