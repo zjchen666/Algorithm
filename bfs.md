@@ -34,7 +34,7 @@ c++
 ```cpp
    分层
    template <class name T>
-   void bfs(T & node):
+   void bfs(T & node) {
        queue<T> q = {node};
        int size = 0;
        
@@ -48,12 +48,13 @@ c++
                size -= 1;
        }
        return;
+   }
 ```
 
 ```cpp
    不分层
    template <class name T>
-   void bfs(T & node):
+   void bfs(T & node) {
        queue<T> q = {node};
        int size = 0;
        
@@ -65,4 +66,5 @@ c++
            size -= 1;
        }
        return;
+   }
 ```
