@@ -109,6 +109,7 @@
         return f[0][-1]
 ```
 https://leetcode.com/problems/longest-palindromic-substring/description/
+https://leetcode.com/problems/longest-valid-parentheses/
 
 #### 博弈型动态规划
 - 要理解 所有子问题必胜则必拜， 一个子问题必败则必胜。
