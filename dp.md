@@ -74,14 +74,12 @@
                   f[j] = max(f[j], f[j - W[i]] + C[i]]
 ```  
 #### 区间型动态规划
-   - f 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
+   - F 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
    - 按照对角线初始化以及搜索。  
 ```cpp
       对角线扫描方法
-        for (int len = 0; len < n; len++)
-        {
-            for (int i = 0; i < n - len; i++)
-            {
+        for (int len = 0; len < n; len++) {
+            for (int i = 0; i < n - len; i++) {
                 j = i + len;
             }
         }
