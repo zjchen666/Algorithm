@@ -74,7 +74,8 @@
                   f[j] = max(f[j], f[j - W[i]] + C[i]]
 ```  
 #### 区间型动态规划
-   - F 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
+   - 一般是一个数组，字串。  
+   - F 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
    - 按照对角线初始化以及搜索。  
 ```cpp
       对角线扫描方法
@@ -108,7 +109,7 @@
 
         return f[0][-1]
 ```
-https://leetcode.com/problems/longest-palindromic-substring/description/
+https://leetcode.com/problems/longest-palindromic-substring/description/  
 https://leetcode.com/problems/longest-valid-parentheses/
 
 #### 博弈型动态规划
