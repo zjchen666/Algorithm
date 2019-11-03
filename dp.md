@@ -149,4 +149,6 @@ https://leetcode.com/problems/stone-game/description/
    - 扫描方式为按行扫描。  
 https://leetcode.com/problems/regular-expression-matching/description/  
 https://leetcode.com/problems/wildcard-matching/description/  
-   
+1092. Shortest Common Supersequence  
+1062. Longest Repeating Substring  
+516. Longest Palindromic Subsequence  
