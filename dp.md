@@ -22,7 +22,7 @@
  - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。
  - 注意 判断时 compare s1[i - 1] and s2[j - 1]
  - 扫描方式为按行扫描。
- 
+```cpp 
       int minDistance(string word1, string word2) {
        int m = word1.size(), n = word2.size();
        
