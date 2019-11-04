@@ -17,6 +17,78 @@
    
 #### 坐标型动态规划
    一般不需要多分配元素，f 为 m * n 矩阵.
+双序列型动态规划
+  - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。
+
+注意 判断时 compare s1[i - 1] and s2[j - 1]
+扫描方式为按行扫描。
+      int minDistance(string word1, string word2) {
+       int m = word1.size(), n = word2.size();
+       
+       vector<vector<int>> f(m + 1, vector<int>(n + 1, 0));
+       
+       for (int i = 0; i < m + 1; ++i) {
+           for (int j = 0; j < n + 1; ++j) {
+               if (i == 0) {
+                   f[i][j] = j;
+               } else if (j == 0) {
+                   f[i][j] = i;
+               } else {
+                   if (word1[i - 1] == word2[j - 1]) {
+                       f[i][j] = f[i - 1][j - 1];
+                   } else {
+                       int val = min(f[i - 1][j], f[i][j - 1]);
+                       f[i][j] = min(f[i - 1][j - 1], val) + 1;
+                   }
+               }
+           }
+       } 
+       return f[m][n];
+   }
+https://leetcode.com/problems/regular-expression-matching/description/
+https://leetcode.com/problems/wildcard-matching/description/
+1092. Shortest Common Supersequence
+1062. Longest Repeating Substring
+516. Longest Palindromic Subsequence
+
+#### 区间型动态规划
+   - 一般是一个数组，字串。  
+   - F 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
+   - 按照对角线初始化以及搜索。  
+```cpp
+      对角线扫描方法
+        for (int len = 0; len < n; len++) {
+            for (int i = 0; i < n - len; i++) {
+                j = i + len;
+            }
+        }
+```
+   - O(n^3) burst bullon
+```python
+        n = len(s)
+        f = [[False for i in range(n)] for j in range(n)]
+        
+        # length == 1
+        for i in xrange(n):
+            f[i][i] = 1
+        
+        # length == 2
+        for i in xrange(n-1):
+            f[i][i+1] = 2 if s[i] == s[i+1] else 1
+            
+        # len 3 -> n
+        for length in xrange(3, n + 1):
+            for i in xrange(n + 1 - length):
+                j = i + length - 1
+                if s[i] == s[j] and f[i+1][j-1]:
+                    f[i][j] = f[i+1][j-1] + 2
+                else:
+                    f[i][j] = max(f[i+1][j], f[i][j+1])
+
+        return f[0][-1]
+```
+https://leetcode.com/problems/longest-palindromic-substring/description/  
+https://leetcode.com/problems/longest-valid-parentheses/
 
 #### 划分型动态规划
 • 给定长度为N的序列或字符串，要求划分成若干段 – 段数不限，或指定K段  
@@ -80,44 +152,6 @@
               for v in range(V, W[i], -1):
                   f[j] = max(f[j], f[j - W[i]] + C[i]]
 ```  
-#### 区间型动态规划
-   - 一般是一个数组，字串。  
-   - F 为 m * n 矩阵， 子问题为 f[i][j]代表区间为 i - j 的子问题。  
-   - 按照对角线初始化以及搜索。  
-```cpp
-      对角线扫描方法
-        for (int len = 0; len < n; len++) {
-            for (int i = 0; i < n - len; i++) {
-                j = i + len;
-            }
-        }
-```
-   - O(n^3) burst bullon
-```python
-        n = len(s)
-        f = [[False for i in range(n)] for j in range(n)]
-        
-        # length == 1
-        for i in xrange(n):
-            f[i][i] = 1
-        
-        # length == 2
-        for i in xrange(n-1):
-            f[i][i+1] = 2 if s[i] == s[i+1] else 1
-            
-        # len 3 -> n
-        for length in xrange(3, n + 1):
-            for i in xrange(n + 1 - length):
-                j = i + length - 1
-                if s[i] == s[j] and f[i+1][j-1]:
-                    f[i][j] = f[i+1][j-1] + 2
-                else:
-                    f[i][j] = max(f[i+1][j], f[i][j+1])
-
-        return f[0][-1]
-```
-https://leetcode.com/problems/longest-palindromic-substring/description/  
-https://leetcode.com/problems/longest-valid-parentheses/
 
 #### 博弈型动态规划
 - 要理解 所有子问题必胜则必拜， 一个子问题必败则必胜。
@@ -143,38 +177,3 @@ https://leetcode.com/problems/can-i-win/description/
 https://leetcode.com/problems/flip-game-ii/description/   
 https://leetcode.com/problems/guess-number-higher-or-lower-ii/description/  
 https://leetcode.com/problems/stone-game/description/
-    
-#### 双序列型动态规划
-   - f 为 (M+1) * (N+1) 矩阵， f[i][j] 为A序列前 1 ～ i 个元素，和B序列前 1 - j 个元素的子问题。  
-   - 注意 判断时 compare s1[i - 1] and s2[j - 1]
-   - 扫描方式为按行扫描。
- ```cpp
-       int minDistance(string word1, string word2) {
-        int m = word1.size(), n = word2.size();
-        
-        vector<vector<int>> f(m + 1, vector<int>(n + 1, 0));
-        
-        for (int i = 0; i < m + 1; ++i) {
-            for (int j = 0; j < n + 1; ++j) {
-                if (i == 0) {
-                    f[i][j] = j;
-                } else if (j == 0) {
-                    f[i][j] = i;
-                } else {
-                    if (word1[i - 1] == word2[j - 1]) {
-                        f[i][j] = f[i - 1][j - 1];
-                    } else {
-                        int val = min(f[i - 1][j], f[i][j - 1]);
-                        f[i][j] = min(f[i - 1][j - 1], val) + 1;
-                    }
-                }
-            }
-        } 
-        return f[m][n];
-    }
-```    
-https://leetcode.com/problems/regular-expression-matching/description/  
-https://leetcode.com/problems/wildcard-matching/description/  
-1092. Shortest Common Supersequence  
-1062. Longest Repeating Substring  
-516. Longest Palindromic Subsequence  
