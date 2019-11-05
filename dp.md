@@ -46,11 +46,12 @@
        return f[m][n];
    }  
 ```
-https://leetcode.com/problems/regular-expression-matching/description/
-https://leetcode.com/problems/wildcard-matching/description/
-1092. Shortest Common Supersequence
-1062. Longest Repeating Substring
-516. Longest Palindromic Subsequence
+
+https://leetcode.com/problems/regular-expression-matching/description/  
+https://leetcode.com/problems/wildcard-matching/description/  
+1092. Shortest Common Supersequence  
+1062. Longest Repeating Substring  
+516. Longest Palindromic Subsequence  
 
 #### 区间型动态规划
    - 一般是一个数组，字串。  
@@ -87,9 +88,9 @@ https://leetcode.com/problems/wildcard-matching/description/
                     f[i][j] = max(f[i+1][j], f[i][j+1])
 
         return f[0][-1]
-```
-https://leetcode.com/problems/longest-palindromic-substring/description/  
-https://leetcode.com/problems/longest-valid-parentheses/
+``` . 
+https://leetcode.com/problems/longest-palindromic-substring/description/ .   
+https://leetcode.com/problems/longest-valid-parentheses/ . 
 
 #### 划分型动态规划
 • 给定长度为N的序列或字符串，要求划分成若干段 – 段数不限，或指定K段  
