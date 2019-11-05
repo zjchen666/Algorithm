@@ -125,7 +125,7 @@ https://leetcode.com/problems/longest-valid-parentheses/
           for v in range(V, W[i], -1):
               f[j] = max(f[j], f[j - W[i]] + C[i]]
 ```
-   * 完全背包: 
+   * 完全背包 - 每种物品不限数量
    - 不选 或 当前 v - Ci 容量 + 当前 重量  
    - 数组size为 v + 1
    - F[i][j] = max(F[i-1][j], F[i][j - W[i]] + C[i]）  
@@ -141,8 +141,8 @@ https://leetcode.com/problems/longest-valid-parentheses/
               f[j] = max(f[j], f[j - W[i]] + C[i]]
 ```   
 
-   * 多重背包: 
-   - 可以认为 0 - 1 背包 多了一些 物品
+   * 多重背包 - 每种物品有K个
+   - 可以认为 0 - 1 背包多了一些 物品
    - 数组size为 v + 1
    ```python
       # n - number of items
