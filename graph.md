@@ -46,7 +46,23 @@
      - 适合只提供边的情况。和定点的值在范围 0 ～ N的情况。
      - 节点的顺序没有要求。 
      - 联通状况可以用数组或者Hash Table存储。
-     
+```cpp
+    int find (int p, vector<int> & id) {
+        while (p != id[p]) {
+            p = id[p];
+        }
+        return p;
+    }
+        
+    void union_find (int p, int q, vector<int> & id, int & count) {
+        int pId = find(p, id);
+        int qId = find(q, id);
+        if (pId != qId) {
+            id[qId] = pId;
+            count++;
+        }
+    }
+```
 ```python
         def find(p, id):
             while id[p] != p:
