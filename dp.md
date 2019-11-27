@@ -65,32 +65,7 @@ https://leetcode.com/problems/wildcard-matching/description/
             }
         }
 ```
-   - O(n^3) burst bullon
-   
-```python
-        n = len(s)
-        f = [[False for i in range(n)] for j in range(n)]
-        
-        # length == 1
-        for i in xrange(n):
-            f[i][i] = 1
-        
-        # length == 2
-        for i in xrange(n-1):
-            f[i][i+1] = 2 if s[i] == s[i+1] else 1
-            
-        # len 3 -> n
-        for length in xrange(3, n + 1):
-            for i in xrange(n + 1 - length):
-                j = i + length - 1
-                if s[i] == s[j] and f[i+1][j-1]:
-                    f[i][j] = f[i+1][j-1] + 2
-                else:
-                    f[i][j] = max(f[i+1][j], f[i][j+1])
-
-        return f[0][-1]
-```
-https://leetcode.com/problems/longest-palindromic-substring/description/ 
+https://leetcode.com/problems/longest-palindromic-substring/description/   
 https://leetcode.com/problems/longest-valid-parentheses/ 
 
 #### 划分型动态规划
