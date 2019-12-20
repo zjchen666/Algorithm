@@ -1,8 +1,10 @@
 ## Binary Search ##
 * 二分查找
+    - 一般都要先排序
     - 查找 target
     - 查找position，low bound/high bound
 * 二分答案：二分后，判断是否是要的答案
+    - 一般不需要排序？
     - 如何找到判断条件？ find peak 比较左右判断上升还是下降。
 
 ### 查找 target
