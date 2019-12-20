@@ -1,6 +1,9 @@
 ## Binary Search ##
 * 二分查找
-* 二分答案
+    - 查找 target
+    - 查找position，low bound/high bound
+* 二分答案：二分后，判断是否是要的答案
+    - 如何找到判断条件？ find peak 比较左右判断上升还是下降。
 
 ### 查找 target
 ```cpp
