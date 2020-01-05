@@ -2,7 +2,7 @@
 * 二分查找
     - 一般都要先排序
     - 查找 target. 结果 找到，lo 或 hi， 没找到在 lo hi 之间。
-    - 查找position，low bound， 结果在hi 或lo。
+    - 查找position，low bound - 结果在hi, high bound: 结果在lo。
 * 二分答案：二分后，判断是否是要的答案
     - 一般不需要排序？
     - 如何找到判断条件？ find peak 比较左右判断上升还是下降。
