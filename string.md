@@ -21,6 +21,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
 
 ### 主要解题思路 ###
 * 排序
+* 两个字符串比较
 * 子字符串查找
 * 模拟算法
 * two pointers
@@ -37,11 +38,7 @@ Return a string of one character whose ASCII code is the integer i. For example,
      2. 按min(len1, len2)先处理。  verify alien dictionary  
      3. 按max(len1, len2)先处理。  add numbers  
      4. 同向 two pointer。 https://leetcode.com/problems/long-pressed-name/  
-     
-  
-  
-  
-
+     5. 字符串长度相同， 不同？模版
 ## 一层循环的子串处理问题
 ```cpp
         i = 0;
@@ -158,8 +155,6 @@ https://leetcode.com/problems/get-equal-substrings-within-budget/
 https://leetcode.com/problems/rearrange-string-k-distance-apart/description/  
 https://leetcode.com/problems/reorganize-string/description/  
 https://leetcode.com/problems/task-scheduler/description/  
-
-* stack相关问题
 
 ### string DP 问题 ###
 思路：使用二维矩阵, 填充true/false 还是计算的结果length？数组的size是n 还是n+1？
