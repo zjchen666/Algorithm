@@ -1,3 +1,52 @@
+ ## Segment Tree ##
+ 建树 O(n）
+ 查询及单点更新都是 O(log(n))
+ ``` cpp
+     Clase TreeNode {
+         int start;
+         int end;
+         int max;
+         TreeNode * left;
+         TreeNode * right;
+         TreeNode(int start, int end) {
+             this->start = start;
+             this->end = end;
+             this->left = NULL;
+             this->right = NULL:
+             this->max = INT_MIN;
+         }
+     }
+ 
+    TreeNode * build (int left, int right, vector<int> &A) {
+        int mid = 0;
+        
+        TreeNode * node = new SegmentTreeNode(left, right);
+        
+        if (left == right) {
+            node->max = A[left];
+            return node;
+        }
+        
+        mid = left + (right - left) / 2;
+        node->left = helper(left, mid, A);
+        node->right = helper(mid + 1, right, A);
+        
+        node->max = max(node->left->max, node->right->max);
+        
+        return node;
+    }
+    
+    int query(TreeNode * root, int start, int end) {
+        // write your code here
+        if (root == NULL) return INT_MIN;
+        
+        if ((root->end < start) || (root->start > end)) return INT_MIN;
+        
+        if ((root->start >= start) && (root->end <= end)) return root->max;
+        
+        return max(query(root->left, start, end), query(root->right, start, end));
+    }
+ ```  
  ## Binary Index Tree ## 
 __用法__ :  O(log(n)) 的时间内求一段区间内的和.
 
