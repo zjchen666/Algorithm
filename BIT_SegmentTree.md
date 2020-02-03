@@ -46,6 +46,26 @@
         
         return max(query(root->left, start, end), query(root->right, start, end));
     }
+    
+    void modify(SegmentTreeNode * root, int index, int value) {
+        // write your code here
+        if (root == NULL) return;
+        
+        if (root->start == root->end) {
+            root->max = value;
+            return;
+        }
+            
+        if (root->left->end >= index) {
+            modify(root->left, index, value);    
+        } else {
+            modify(root->right, index, value);    
+        }
+        
+        root->max = root->left->max > root->right->max? root->left->max : root->right->max;
+             
+        return;
+    }
  ```  
  ## Binary Index Tree ## 
 __用法__ :  O(log(n)) 的时间内求一段区间内的和.
