@@ -28,8 +28,8 @@
         }
         
         mid = left + (right - left) / 2;
-        node->left = helper(left, mid, A);
-        node->right = helper(mid + 1, right, A);
+        node->left = build(left, mid, A);
+        node->right = build(mid + 1, right, A);
         
         node->max = max(node->left->max, node->right->max);
         
