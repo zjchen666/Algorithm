@@ -75,6 +75,10 @@ __主要操作__ ：update 某一点(Olog(n))， 区间求和(Olog(n)), 建树 O
 __离散化__ ： discretization. 用于降低区间范围 
 
 ```cpp
+    int lowbit(int x) {
+        return x & (~x + 1);
+    }
+    
     void create(vector<int> & input, vector<int> & arr) {
         int size = arr.size();
         for (int i = 1; i < size; ++i) {
