@@ -162,4 +162,42 @@ int setBitMap(vector<int> & map, int start, int len) {
 
     return 0;
 }
+
+// Valid Square
+class Solution {
+public:
+    bool validSquare(vector<int>& p1, vector<int>& p2, vector<int>& p3, vector<int>& p4) {
+        
+        return isSquare(p1, p2, p3, p4) ||
+               isSquare(p1, p3, p2, p4) ||
+               isSquare(p1, p4, p2, p3) ||
+               isSquare(p2, p3, p1, p4) ||
+               isSquare(p2, p4, p1, p3) ||
+               isSquare(p3, p4, p1, p2);
+    }
+    
+    bool isSquare(vector<int>& p1, vector<int>& p2, vector<int>& p3, vector<int>& p4) {
+        int x0, y0, x1, y1;
+        if (p1 == p2) return false;
+        
+        x0 = p1[0] + (p2[1] - p1[1]);
+        y0 = p1[1] - (p2[0] - p1[0]);
+        x1 = p2[0] + (p2[1] - p1[1]);
+        y1 = p2[1] - (p2[0] - p1[0]);
+        
+        if ((p3 == vector{x0, y0} && p4 == vector{x1, y1}) ||
+            (p4 == vector{x0, y0} && p3 == vector{x1, y1}))
+            return true;
+        
+        x0 = p1[0] - (p2[1] - p1[1]);
+        y0 = p1[1] + (p2[0] - p1[0]);
+        x1 = p2[0] - (p2[1] - p1[1]);
+        y1 = p2[1] + (p2[0] - p1[0]);
+        
+        if ((p3 == vector{x0, y0} && p4 == vector{x1, y1}) ||
+            (p4 == vector{x0, y0} && p3 == vector{x1, y1}))
+            return true;
+        
+        return false;
+    }
 ```
