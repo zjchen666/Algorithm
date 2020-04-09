@@ -78,4 +78,88 @@ public:
         return;
     }
 };
+
+//bitmap
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int clearBitMap(vector<int> & map, int start, int len) {
+    int left = start, right = start + len - 1;
+    int size = map.size();
+
+    if (map.empty() || left < 0 || right > size)
+        return -1;
+
+    // clear ancestor
+    map[0] = 0;
+    while (left != 0 || right != 0) {
+        for (int i = left; i <= right; ++i) {
+            map[i] = 0;
+        }
+        cout << "l:" << left << right << endl;
+        left = (left > 0) ? (left - 1) >> 1 : 0;
+        right = (right > 0) ? (right - 1) >> 1 : 0;
+    }
+
+    // clear descendent
+    left = start;
+    right = start + len - 1;
+    while (left < size) {
+        for (int i = left; i <= right && i < size; ++i) {
+            map[i] = 0;
+        }
+
+        cout << "dl:" << left << right << endl;
+        left = (left << 1) + 1;
+        right = (right + 1) << 1;
+    }
+
+    return 0;
+}
+
+int setBitMap(vector<int> & map, int start, int len) {
+    int left = start, right = start + len - 1;
+    int size = map.size();
+
+    if (map.empty() || left < 0 || right >= size)
+        return -1;
+
+    // set ancestor
+    map[0] = 0;
+    while ((left != 0 || right != 0) && (left <= right)) {
+        for (int i = left; i <= right; ++i) {
+            map[i] = 1;
+        }
+        cout << "sal:" << left << right << endl;
+
+        if (left % 2 == 0) {
+            left = map[left - 1] ? left >> 1 : (left + 1) >> 1;
+        } else {
+            left = (left > 0) ? (left - 1) >> 1 : 0;
+        }
+
+        if (right % 2 && right < size - 1) {
+            right = map[right + 1] ? right >> 1 : (right >> 1) - 1;
+        } else {
+            right = (right > 0) ? (right - 1) >> 1 : 0;
+        }
+    }
+
+    // set descendent
+    left = start;
+    right = start + len - 1;
+    while (left < size) {
+        for (int i = left; i <= right && i < size; ++i) {
+            map[i] = 1;
+        }
+
+        cout << "sdl:" << left << right << endl;
+        left = (left << 1) + 1;
+        right = (right + 1) << 1;
+    }
+
+    return 0;
+}
 ```
