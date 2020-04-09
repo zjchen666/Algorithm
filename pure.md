@@ -53,7 +53,6 @@ public:
             q.pop_front();
             cb();
         }
-        mtx.unlock();
         return;
     }
 
