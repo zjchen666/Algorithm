@@ -2,10 +2,10 @@
    * Quick Sort
       * [QuickSort]
       * [3 Way QuickSort](#3-way-quickSort)
-   * Merge Sort
+   * [Merge Sort](#merge-sort)
    * [Counting Sort](#counting-sort)
    * Select Sort
-   * Heap Sort
+   * [Heap Sort](#heap-sort)
    * Bucket Sort
    * Insert Sort
    * Bubble Sort
@@ -172,4 +172,50 @@ class Solution:
 			A[k] = aux[k]
 			k += 1
 		return
+```
+### Heap Sort ###
+```cpp
+    void heapify(vector<int>& A, int i, int heap_size) {
+        int l = i * 2;
+        int r = i * 2 + 1;
+        int largest = i;
+        
+        if (l <= heap_size && A[l - 1] > A[i - 1]) {
+            largest = l;
+        }
+        
+        if (r <= heap_size && A[r - 1] > A[largest - 1]) {
+            largest = r;
+        }
+        
+        if (i != largest) {
+            swap(A[i - 1], A[largest - 1]);
+            heapify(A, largest, heap_size);
+        }
+        
+        return;
+    }
+    
+    void buildHeap(vector<int>& A) {
+        int size = A.size();
+        
+        for (int i = size / 2; i >= 1; --i) {
+            heapify(A, i, size);
+        }
+        
+        return;
+    }
+    
+    void heapSort(vector<int>& A) {
+        // 1. build heap
+        buildHeap(A);
+        
+        // 2. exchange max val with last element in array
+        for (int i = A.size() - 1; i > 0; --i) {
+            swap(A[0], A[i]);
+            heapify(A, 1, i);
+        }
+        
+        return;
+    }
 ```
