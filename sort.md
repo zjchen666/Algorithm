@@ -1,6 +1,6 @@
 ## Sort Algrithom ##
    * Quick Sort
-      * [QuickSort]
+      * [QuickSelect](#quick-select)
       * [3 Way QuickSort](#3-way-quickSort)
    * [Merge Sort](#merge-sort)
    * [Counting Sort](#counting-sort)
@@ -135,7 +135,8 @@ class Solution:
         else:
             return nums[k]
 ```
-## MergeSort ##
+
+### MergeSort ###
 - 可用于解决，数组的一类需要排序后 O(N)的recurence问题：  
    https://leetcode.com/problems/reverse-pairs/description/  
    https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/  
