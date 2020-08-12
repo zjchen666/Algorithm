@@ -43,10 +43,13 @@ __递归的出⼝__：什么时候返回, 判断条件。
    3. bit mask的方法：
    ```cpp
        for (int i; i < 1 << n; ++i) {
+           vector<int> stack;
            for(int j; j < n; ++j) {
                if (i & 1 << j)
-               // add | 标记
+                  // add | 标记
+                  stack.push_back(nums[j]);
            }
+           result.push_back(stack);
            // get one result
        }
    ```
