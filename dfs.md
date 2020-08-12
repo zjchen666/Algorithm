@@ -25,6 +25,20 @@ __递归的出⼝__：什么时候返回, 判断条件。
     }
    ``
    2. 标准DFS的方法。
+   ```cpp
+       void helper(vector<vector<int>> &result, vector<int> &stack, int index, vector<int>& nums) {
+        result.push_back(stack);
+        
+        // 递归出口 for loop判断结束条件
+        for (int i = index; i < nums.size(); ++i) {
+            stack.push_back(nums[i]);
+            helper(result, stack, i + 1, nums);
+            stack.pop_back();
+        }
+        
+        return;
+    }
+   ```
    3. bit mask的方法：
    ```cpp
        for (int i; i < 1 << n; ++i) {
