@@ -1,9 +1,29 @@
 
+## DFS的问题基本为排列或组合的问题
+__三要素__:  
+__递归的定义__：接受什么参数，返回什么值. 一般包括: 结果, 中间状态, 返回的判断条件,其他参数.  
+__递归的拆解__：每次递归都是为了让问题规模变⼩.如何进入子问题.  
+__递归的出⼝__：什么时候返回, 判断条件。  
 
-Traverse
 ==============
 ## Subset ##
-   1. 选或不选的 DFS方法
+   1. 选或不选的,选A或选B的DFS方法
+   ```cpp
+       void helper(vector<vector<int>> &result, vector<int> &stack, int index, vector<int>& nums) {
+        if (index == nums.size()) {
+            result.push_back(stack);
+            return;
+        }
+        
+        helper(result, stack, index + 1, nums);
+        
+        stack.push_back(nums[index]);
+        helper(result, stack, index + 1, nums);
+        stack.pop_back();
+
+        return;
+    }
+   ``
    2. 标准DFS的方法。
    3. bit mask的方法：
    ```cpp
