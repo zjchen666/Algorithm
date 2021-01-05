@@ -69,27 +69,49 @@
    - Right bound - 查找到target left = mid
    
 ```cpp
-int search(const vector<int> &a, int target)
-{
-    int left = 0, mid = 0;
-    int right = a.len - 1;
+    int upper_bound(const vector<int> &a, int target)
+    {
+        int left = 0, mid = 0;
+        int right = a.size() - 1;
 
-    while (left + 1 < right) {
-        mid = left + (right - left) / 2;
-        if (a[mid] <= target) {
-            left = mid;
-        } else (a[mid] > taget) {
-            right = mid;
+        while (left + 1 < right) {
+            mid = left + (right - left) / 2;
+            if (a[mid] <= target) {
+                left = mid;
+            } else if (a[mid] > target) {
+                right = mid;
+            }
         }
+
+        if (a[right] == target)
+            return right;
+        else if (a[left] == target)
+            return left;
+        else
+            return -1;
     }
 
-    if (a[right] == target)
-        return right;
-    else if (a[left] == target)
-        return left;
-    else
-        return -1;
-}
+    int lower_bound(const vector<int> &a, int target)
+    {
+        int left = 0, mid = 0;
+        int right = a.size() - 1;
+
+        while (left + 1 < right) {
+            mid = left + (right - left) / 2;
+            if (a[mid] < target) {
+                left = mid;
+            } else if (a[mid] >= target) {
+                right = mid;
+            }
+        }
+
+        if (a[left] == target)
+            return left;
+        else if (a[right] == target)
+            return right;
+        else
+            return -1;
+    }
 ```
 
 
