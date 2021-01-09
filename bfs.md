@@ -10,7 +10,7 @@
    **非递归的方式找所有方案 Iteration solution for all possible results**
 
 ### 注意事项
-   1. **注意判断需不需要使用分层遍历**
+   1. **注意判断需不需要使用分层遍历** 什么时候分层什么时候不分？  
    2. __能用BFS一定不用DFS，non-recursion and easy understanding!__  
    3. **注意什么时候需要标记visited，tree的BFS不需要标记visited， topological不用， graph的遍历需要！**    
    4. clone 类问题要结合hashtable or hashset
@@ -68,3 +68,4 @@ c++
        return;
    }
 ```
+### 双向BFS遍历
