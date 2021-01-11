@@ -1,7 +1,8 @@
 ## 主要算法 ##
 
-链表 同时具有 数组 和 tree的特性，iteration and resursion  都可以支持。  
+### 思维模式： 链表 同时具有 数组 和 tree的特性，iteration and resursion  都可以支持。  
 
+### 主要题型及解题思路：
 * [sort](#sort)
 * merge
 * find
@@ -9,12 +10,15 @@
 * partition
 * clone
 
-### 解题思路及技巧 ###
+### 一些注意的地方
  * sort 类问题首先考虑按值sort。而不是list 本身。
  * 利用快慢指针解决circle的问题及二分的问题。快指针不一定必须是慢指针的一倍。
  * reverse相关操作可以利用stack，主要要存link lisk元素的value，实在不行也可以直接存元素。
  * 直接交换value也可以考虑，但要确定是否允许。
- * 遍历链表时， 什么时候 判断 node == None 什么时候判断 node->next == None? 
+ 
+### 代码实现注意事项 ###
+ * 遍历链表时， _什么时候 判断 node == None 什么时候判断 node->next == None? _
+ * 遍历链表时要从&dummy开始？ 为什么？ 因为第一个元素也可能被交换位置。  
  
 ### Sort ###
     + 要求 O(nlgn)的时间复杂度，使用mergeSort，快慢指针找到终点。
