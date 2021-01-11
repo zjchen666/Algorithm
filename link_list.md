@@ -1,4 +1,7 @@
 ## 主要算法 ##
+
+链表 同时具有 数组 和 tree的特性，iteration and resursion  都可以支持。  
+
 * [sort](#sort)
 * merge
 * find
