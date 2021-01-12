@@ -137,10 +137,30 @@ class Solution:
         return dummy.next
 ```
 ## 反转单向链表 ## 
-   ### 方法1 ### （就用这个） 
+   ### 标准方法
+   ```
+       ListNode* reverseList(ListNode* head) {
+        ListNode *pre = NULL, *cur = NULL, *next = NULL;
+        
+        if (head ==  NULL)
+            return head;
+        
+        cur = head;
+        next = head;
+        
+        while (cur) {
+            next = cur->next;
+            cur->next = pre;
+            
+            pre = cur;
+            cur = next;
+        }
+        
+        return pre;
+    }
+   ```
+   ### 方法1 ###
    创建新链表， 遍历旧链表，不断向新链表头插入。1->2->3->4, 2->1->3->4, 3->2->1->4, 4->3->2->1
-```python
-```
    ### 方法2 ### 
    遍历旧链表，不断向链表头插入当前节点的下一个节点。1->2->3->4, 2->1->3->4, 3->2->1->4, 4->3->2->1
  
