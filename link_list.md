@@ -139,16 +139,17 @@ class Solution:
 ## 反转单向链表 ## 
    ### 标准方法
    ```
-       ListNode* reverseList(ListNode* head) {
+       翻转 [a, b) 区间的列表元素  
+       ListNode* reverseList(ListNode* a， ListNode* b) {
         ListNode *pre = NULL, *cur = NULL, *next = NULL;
         
-        if (head ==  NULL)
+        if (a == NULL)
             return head;
         
-        cur = head;
-        next = head;
+        cur = a;
+        next = a;
         
-        while (cur) {
+        while (cur != b) {
             next = cur->next;
             cur->next = pre;
             
