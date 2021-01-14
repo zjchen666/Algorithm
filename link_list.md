@@ -3,12 +3,11 @@
 ### 思维模式： 链表 同时具有 数组 和 tree的特性，iteration and resursion  都可以支持。  
 
 ### 主要题型及解题思路：
-* [sort](#sort)
-* merge
-* find
-* reverse
-* partition
-* clone
+* Merge链表
+* 查找nth node在链表中的位置 
+* 反转链表
+* 需要使用recursion的问题
+* 结合其他数据结构的操作
 
 ### 一些注意的地方
  * sort 类问题首先考虑按值sort。而不是list 本身。
