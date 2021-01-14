@@ -5,7 +5,45 @@
 ### 主要题型及解题思路：
 * Merge链表
 * 查找nth node在链表中的位置 
+```cpp
+    //注意head是&dummy
+    ListNode* findNth(ListNode* head, int n) {
+        if (head == NULL) 
+            return NULL;
+        
+        ListNode *cur = head;
+        
+        while (n > 0) {
+            cur = cur->next;
+            n--;
+        }
+        
+        return cur;
+    }
+```
 * 反转链表
+   ```cpp
+       翻转 [a, b) 区间的列表元素， 左闭右开
+       ListNode* reverseList(ListNode* a， ListNode* b) {
+        ListNode *pre = NULL, *cur = NULL, *next = NULL;
+        
+        if (a == NULL)
+            return head;
+        
+        cur = a;
+        next = a;
+        
+        while (cur != b) {
+            next = cur->next;
+            cur->next = pre;
+            
+            pre = cur;
+            cur = next;
+        }
+        
+        return pre;
+    }
+   ```
 * 需要使用recursion的问题
 * 结合其他数据结构的操作
 
@@ -135,30 +173,7 @@ class Solution:
         
         return dummy.next
 ```
-## 反转单向链表 ## 
-   ### 标准方法
-   ```
-       翻转 [a, b) 区间的列表元素  
-       ListNode* reverseList(ListNode* a， ListNode* b) {
-        ListNode *pre = NULL, *cur = NULL, *next = NULL;
-        
-        if (a == NULL)
-            return head;
-        
-        cur = a;
-        next = a;
-        
-        while (cur != b) {
-            next = cur->next;
-            cur->next = pre;
-            
-            pre = cur;
-            cur = next;
-        }
-        
-        return pre;
-    }
-   ```
+## 反转单向链表其他方法 ## 
    ### 方法1 ###
    创建新链表， 遍历旧链表，不断向新链表头插入。1->2->3->4, 2->1->3->4, 3->2->1->4, 4->3->2->1
    ### 方法2 ### 
