@@ -5,18 +5,15 @@
 
 模板
 ```python
-    def mono_stack(nums):        
-        result = 0
+    def monostoneStack(self, arr)
         stack = []
-        
-        for i, num in enumerate(nums):
-            while stack and num < nums[stack[-1]]:
-                index = stack.pop()
-                distance = i if not stack else i - stack[-1] - 1
-                ## Do something and output ##
-            stack.append(i)
-            
-        return result 
+        ans = 定义一个长度和 arr 一样长的数组，并初始化为 -1
+        循环 i in  arr:
+            while stack and arr[i] > arr[栈顶元素]:
+                peek = 弹出栈顶元素
+                ans[peek] = i - peek
+            stack.append(i) （注意压栈的是index）
+        return ans
 ```
 
 [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/description/)  
