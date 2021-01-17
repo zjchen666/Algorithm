@@ -384,34 +384,31 @@ class Solution:
 ```
    
 ## Interval ##
-   * 扫描线法
-   1. 把所有关键点（起点，终点）排序。
-   2. 扫描一遍输出结果。 中间计算可能会用到其它数据结构，（高度，pq/multiset），注意重复点的处理。
-   3. 判断两个线段相交的充要条件： max(A.start, B.start) <= min(A.end, B.end);
-   
-```python
-    def helper(self, x, y):
-        if x[0] != y[0]:
-            return x[0] - y[0]
-        else:
-            return x[1] - y[1]
+   解题方法
+   1. 把所有线段排序。
+   2. 扫描所有线段输出结果。
+```cpp
+模板
+    bool compare(vector<int> &a, vector<int> &b) {
+        /* 依据需要实现 end节点 */
+        if (a[0] == b[0]) {
+            return a[1] > b[1];
+        } else {
+            return a[0] < b[0];
+        }
+    }
 
-    def countOfAirplanes(self, airplanes):
-        # write your code here
-        if not airplanes:
-            return 0
+    int intervals(vector<vector<int>>& intervals) {
+        int res = intervals.size();
+        if (res == 0)
+            return 0;
             
-        n = len(airplanes)
-        times = []
-        for i in range(n):
-            times.append([airplanes[i].start, 1])
-            times.append([airplanes[i].end, -1])
+        /* 排序 */
+        sort(intervals.begin(), intervals.end(), compare/*function*/);
             
-        times.sort(cmp = self.helper)
-        most = 0
-        count = 0
-        for time in times:
-            count += time[1]
-            most = max(most, count)
-        return most
+        int end = intervals[0][1];
+        
+        for (int i = 1; i < intervals.size(); ++i) {
+            /* 扫描节点 并做对应处理 */
+        }
 ```
