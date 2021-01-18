@@ -11,7 +11,7 @@ Trie Tree
 - 前缀问题 比hash table快
 - 空间优化 hash table的字符串相关问题， 
 
-### 数据结构 ###
+### 模板 ###
 ```cpp
    class TrieNode {
        public:
