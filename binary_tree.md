@@ -13,6 +13,20 @@
       
 ## 主要考点：
 * [二叉树的递归与非递归遍历](#遍历)
+```cpp
+    TreeNode& traverse(TreeNode &root) {
+        if (root == NULL)
+            return NULL;
+      
+        /* pre-order do something */
+        traverse(root->left);
+        /* in-order do something */
+        traverse(root->right);
+        /* postorder do something */
+        
+        return result;
+    } 
+```
 * Convert preorder/inorder/postorder into binary tree. -> Traverse. 注意如何找root，如何slice左右子树。
 * 两个Tree 比较问题 - 考虑每个树的subtree该如何比较， divide conquer
 * Sub Tree 问题
