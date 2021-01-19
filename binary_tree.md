@@ -125,6 +125,7 @@
 
 ## Pre-order Recursion and Non-recursion
 ```python
+    /* Python */
     def preorderTraversal(self, root):
         """
         :type root: TreeNode
@@ -160,7 +161,31 @@
         self.traverse(root.left)
         self.traverse(root.right)
 ```
+```cpp
+    /* C++ */
+    vector<int> preorderTraversal(TreeNode* root) {
+        stack<TreeNode*> s;
+        vector<int> res;
+        TreeNode *cur = root;
+            
+        if (root == NULL)
+            return res;
+        
+        while (!s.empty() || cur) {
+            if (cur != NULL) {
+                res.push_back(cur->val);
+                s.push(cur);
+                cur = cur->left;
+            } else {
+                cur = s.top();
+                s.pop();
+                cur = cur->right;
+            }
+        }
 
+        return res;
+    }
+```
 ## In-order Recursion and Non-Recursion ##
 ```python
     def inorderTraversal(self, root):
