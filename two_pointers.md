@@ -6,15 +6,25 @@
  * 求最大面积的问题， 相对往中间移动，不断换值比较大/小的元素。
  * intersection of two arrays. 先sort然后同向移动，找出相同的值。
  * subarray问题，一般都是要先求presum。
- ### 相对双指针 ###
-     一般需要sort
+ ### 相对双指针
+ 一般需要sort
     * Two sum 
     * Container With Most Water
  ### 同向双指针 ###
-    1. sliding window  
-    2. pointer 1 for string 1 and point 2 for string 2.  
-    Minimum Size Subarray Sum
+ * sliding window  
+ * pointer 1 for string 1 and point 2 for string 2.  
+    ```cpp
+    int j = 0;
+    for (int i = 0; i < n; i++) {
+        // 不满⾜则循环到满⾜搭配为⽌
+        while (j < n && i 到 j之间不满⾜条件) {
+        j += 1;
+    }
     
+    if (i 到 j之间满⾜条件) {
+        /* 处理i，j这次搭配 */
+    }
+    ```
 Given an array of integers, find how many pairs in the array such that their sum is less than or equal to a specific target number. Please return the number of pairs.
 Given nums = [2, 7, 11, 15], target = 24. 
 Return 5. 
