@@ -225,7 +225,28 @@
         self.inorder.append(root.val)
         self.traverse(root.right)
 ```
-
+```cpp
+    vector<int> inorderTraversal(TreeNode* root) {
+        TreeNode *cur = root;
+        stack<TreeNode *> s;
+        vector<int> res;
+        
+        while (!s.empty() || cur) {
+            while (cur) {
+                s.push(cur);
+                cur = cur->left;
+            }
+            
+            cur = s.top();
+            s.pop();
+            res.push_back(cur->val);
+            
+            cur = cur->right;
+        }
+        
+        return res;
+    }
+```
 ## Post-Order Recursion and non-recursion ##
 ```python
     def postorderRecur(self, root):
