@@ -14,6 +14,7 @@ Array
 * [Select and Sort](/quicksort_mergesort.md)
 * [swich sort 问题](#switch-sort)
 * [One/Two Pass 问题](#one-two-pass)
+* [2D 数组问题](#2d-array)
 
 ## switch sort ##
    适用于 0 < nums[i] <= n, n 为array的size一类问题。 solution: switch and re-order  
@@ -410,5 +411,25 @@ class Solution:
         
         for (int i = 1; i < intervals.size(); ++i) {
             /* 扫描节点 并做对应处理 */
+        }
+```
+## 2d array ##
+   1. roate 问题
+    一般做对角线，行列的reverse。
+    注意reverse的时候只需要处理一半
+```
+        int m = matrix.size();
+        int n = matrix[0].size();
+        
+        for (int i = 0; i < m; ++i) {
+            for (int j = i; j < n; ++j) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n / 2; ++j) {
+                swap(matrix[i][j], matrix[i][n - j - 1]);
+            }
         }
 ```
