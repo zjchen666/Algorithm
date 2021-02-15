@@ -94,6 +94,7 @@ https://leetcode.com/problems/minimum-window-substring/description/
 https://leetcode.com/problems/longest-repeating-character-replacement/  
 https://leetcode.com/problems/max-consecutive-ones-ii/description/  
 https://leetcode.com/problems/get-equal-substrings-within-budget/
+https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/
 
 ### Rearrange String
    Solution:
