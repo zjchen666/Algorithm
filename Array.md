@@ -412,6 +412,23 @@ class Solution:
         for (int i = 1; i < intervals.size(); ++i) {
             /* 扫描节点 并做对应处理 */
         }
+        
+ 这是一个通用的算法，就是遇到任何interval，将interval的start当成key存入，value+1，遇到end，存入。但是要-1； 用一个TreeMap存储，保证key的值是sort的。 时间复杂度是O(N) 该方法可以用于如何calendar以及meeting room的题解。
+
+public int minMeetingRooms(List<Interval> intervals) {
+        TreeMap<Integer, Integer> tmap = new TreeMap<>();
+        int ans = 0, cnt = 0;
+        for (Interval i : intervals) {
+            int start = i.start, end = i.end;
+            tmap.put(start, tmap.getOrDefault(start, 0) + 1);
+            tmap.put(end, tmap.getOrDefault(end, 0) - 1);
+        }
+        for (int k : tmap.keySet()) {
+            cnt += tmap.get(k);
+            ans = Math.max(ans, cnt);
+        }
+        return ans;
+}
 ```
 ## 2d array ##
    1. roate 问题
