@@ -31,7 +31,11 @@ Return a string of one character whose ASCII code is the integer i. For example,
 * 字符串替换： 
    - 从后向前替换
    https://leetcode.com/problems/find-and-replace-in-string/description/
-   
+  
+  
+## 判断一个字符串是否由子串构成
+1：串中有重复字串的串的特点：按位旋转，转动一定位数，会和原来的串一个顺序 2：我们的目标就是找到按位旋转的所有情况。 3：两个串相加就包含所有情况 4：若两串相加且去头去尾，还包含目标串，则说明旋转一定位数后，能够回到原来的串，也就说明该串是重复字符串。
+
 ## 两个字符串比较
    solutions:   
      1. 填充短的。  https://leetcode.com/problems/compare-version-numbers/description/  
