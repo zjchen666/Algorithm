@@ -160,8 +160,9 @@
     }
 ```
 https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  - 分为几艘船最小capacity 
-https://leetcode.com/problems/split-array-largest-sum.   
-「力扣」第 875 题：爱吃香蕉的珂珂 - 分为几个小时最小速度
-「力扣」第 1482 题：制作 m 束花所需的最少天数（中等）. 分为m段最小天数
-「力扣」第 1552 题：两球之间的磁力（中等）. 
+https://leetcode.com/problems/split-array-largest-sum        
+「力扣」第 1482 题：制作 m 束花所需的最少天数（中等）. 分为m段最小天数    
+https://leetcode.com/problems/magnetic-force-between-two-balls/。  
+https://leetcode.com/problems/koko-eating-bananas/  
+
  
