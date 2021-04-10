@@ -116,6 +116,12 @@
 
 
 ### 二分答案
+特点：  
+*这道题让我们「查找一个有范围的整数」，以后遇到类似问题，要想到可以尝试使用「二分」；  
+*题目描述类似使「最大值」最小化 或者【最小值】最大化；  
+*题目中出现的关键字「非负整数」、分割【连续] 成几天，或几段的最小值.  
+*在代码层面上，这些问题的特点都是：在二分查找的判别函数里，需要遍历数组一次。    
+
 1. 定义出 answer的范围 min - max
 2. 在范围内二分查找，依据满足条件或不满足条件来缩小范围
 ```cpp
@@ -153,6 +159,9 @@
         return true;
     }
 ```
-https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  
-https://leetcode.com/problems/split-array-largest-sum
-
+https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/  - 分为几艘船最小capacity 
+https://leetcode.com/problems/split-array-largest-sum.   
+「力扣」第 875 题：爱吃香蕉的珂珂 - 分为几个小时最小速度
+「力扣」第 1482 题：制作 m 束花所需的最少天数（中等）. 分为m段最小天数
+「力扣」第 1552 题：两球之间的磁力（中等）. 
+ 
